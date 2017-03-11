@@ -1,5 +1,5 @@
 # Tim3-Exodia
-Èlanovi Tima:
-1.Hamza Išeriæ
-2.Enis Ahmetoviæ
-3.Mehmed Aljiæ
+Clanovi Tima:
+1.Hamza Iseric
+2.Enis Ahmetovic
+3.Mehmed Aljic
