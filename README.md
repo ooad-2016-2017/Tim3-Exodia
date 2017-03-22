@@ -36,6 +36,29 @@ Menadžer vodi evidenciju o zaposlenicima u bazi podataka. Također vodi evidenc
 
 
 ## Funkcionalnosti
+- odabir jezika
+- odabir tipa sobe
+- rezervacija sobe
+- otvaranje vrata glasom
+- provjera isteka rezervacije
+- jednostavno naručivanje jela
+- jednostavna dostava do stola
+- automatsko ažuriranje namirnica
+- obavještenje zaštitara o isteku datuma rezervacije
+- prihvatanje narudžbi u kuhinji
+- naplaćivanje sobe
+- naplaćivanje jela
+- vođenje evidencije o zaposlenim
+- vođenje evidencije o stanju namirnica u kuhinji
+
+
+
+
+
+
+
+
+
 
 
 
