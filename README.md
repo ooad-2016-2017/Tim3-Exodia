@@ -51,17 +51,10 @@ Menadžer vodi evidenciju o zaposlenicima u bazi podataka. Također vodi evidenc
 - vođenje evidencije o zaposlenim
 - vođenje evidencije o stanju namirnica u kuhinji
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Akteri
+1. Klijent hotela je osoba koja želi da iznajmi sobu
+2. Klijent restorana je osoba koja želi da jede u resoranu
+3. Zaštitar je osoba koja provjerava da li su ljudi na vrijeme napustili hotel
+4. Kuhar je osoba koja prima narudžbe, pravi jelo i dostavlja jelo
+5. Menadžer vodi evidenciju o uposlenicima i stanju namirnica u kuhinji
 
