@@ -15,8 +15,7 @@ Future Hotel je sistem koji automatizuje iznajmljivanje soba hotela, također ol
 **Rezervacija**
 Klijent, pri ulasku u hotel, na recepciji nailazi na jedan od uređaja na kojima će biti instalirana naša aplikacija. Tada klijent bira tip sobe i broj noći. Pri odabiru se prikazuju samo dostupne sobe. Na kraju klijent provlači svoju karticu i u zavisnosti od stanja soba mu biva iznajmljena ili ne.
 
-**Naručivanje jela**
-
+**Naručivanje jela**\n
 Klijent kada sjedne za neki sto u restoranu, slično kao i kod rezervacije, koristi uređaj na kojem je instalirana aplikacija. Bira jelo i prikazana su samo ona jela za koja imaju namirnice na stanju. Na kraju klijent provlači svoju karticu, isto kao kod rezervacije soba, i u zavisnosti od stanja narudžba se odobri ili odbije. Svaki sto ima svoj uređaj koji ima svoj jedinstveni ID. Time se zna s kojeg je stola došla narudžba. Kada se jelo naruči odmah se iz baze skidaju količine namirnica koje su potrebne za to jelo. Narudžba ide direktno u kuhinju.
 
 **Dostava jela**
