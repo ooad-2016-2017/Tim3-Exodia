@@ -35,6 +35,9 @@ Menadžer vodi evidenciju o zaposlenicima u bazi podataka. Također vodi evidenc
 **Verifikacija glasa**
 
 
+//ovo treba dodati
+
+
 ## Funkcionalnosti
 - odabir jezika
 - odabir tipa sobe
