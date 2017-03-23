@@ -35,7 +35,7 @@ Menadžer vodi evidenciju o zaposlenicima u bazi podataka. Također vodi evidenc
 **Verifikacija glasa**
 
 
-Klijent klikne na dugme i kaže nešto. Uzorak se uzima i upoređuje sa uzorkom u bazi od te osobe. Nakon što istekne rezervacija sistem briše iz baze glas i šalje signal zaštitaru da provjeri sobu.
+Klijent klikne na dugme, koje se nalazi kod svakih vrata, i kaže nešto. Uzorak se uzima i upoređuje sa uzorkom u bazi podaka. Nakon što istekne rezervacija sistem briše iz baze glas i šalje signal zaštitaru da provjeri stanje u sobi.
 
 
 ## Funkcionalnosti
