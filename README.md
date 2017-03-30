@@ -1,5 +1,5 @@
 <center>
-![alt tag](http://vignette1.wikia.nocookie.net/yugioh/images/c/c0/ExodiatheForbiddenOne-TF04-JP-VG.jpg)
+<img src="http://vignette1.wikia.nocookie.net/yugioh/images/c/c0/ExodiatheForbiddenOne-TF04-JP-VG.jpg" alt="1">
 <center>
 
 # Tim3-Exodia
