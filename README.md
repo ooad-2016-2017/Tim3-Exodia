@@ -1,3 +1,5 @@
+![alt tag](http://vignette1.wikia.nocookie.net/yugioh/images/c/c0/ExodiatheForbiddenOne-TF04-JP-VG.jpg)
+
 # Tim3-Exodia
 
 # Tema: Future Hotel
