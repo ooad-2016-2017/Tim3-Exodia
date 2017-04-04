@@ -1,5 +1,5 @@
 <center>
-<img src="http://vignette1.wikia.nocookie.net/yugioh/images/c/c0/ExodiatheForbiddenOne-TF04-JP-VG.jpg" alt="1">
+<img src="https://media.giphy.com/media/3o7btUAYepL6TTuy3u/giphy.gif" alt="1">
 <center>
 
 # Tim3-Exodia
