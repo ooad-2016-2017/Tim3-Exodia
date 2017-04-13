@@ -1,16 +1,15 @@
-1.Princip pojedinaène odgovornosti
+1.Princip pojedinaÄne odgovornosti
 Princip pojedinacne odgovornosti je zadovoljen za klase:
-"Narudzba", "Jelo", "Restoran", "Zaposlenik" i njene naslijeğene, "Soba", "Gost",
-zato jer bi jedini razlozi koji bi vodili promjeni tih klasa bili jedinstveni, tj. svaka od ovih klasa dosljedno obavlja jedinstvene funkcionalnosti. Jedina nedosljednost bila bi za klasu "Hotel" gdje se mimo funkcionalnosti rezervacije vodi i evidencija o zaposlenim. Dvije promjene u naèinu funkcioniranja tih metoda ne bi oèuvalo koncept jedinstvenosti projene odreğene klase. Rješenje datog problema moglo bi se naæi u tome da izvršenje funkcionalnosti dodavanja i brisanja zaposlenika prebacimo u novu klasu koja bi obavljala potrebni rad s bazom i tako kompletiramo i izdvojimo te logièki zaokruimo i tu funkcionalnost.
+"Narudzba", "Jelo", "Restoran", "Zaposlenik" i njene naslijeÄ‘ene, "Soba", "Gost", zato jer bi jedini razlozi koji bi vodili promjeni tih klasa bili jedinstveni, tj. svaka od ovih klasa dosljedno obavlja jedinstvene funkcionalnosti. Jedina nedosljednost bila bi za klasu "Hotel" gdje se mimo funkcionalnosti rezervacije vodi i evidencija o zaposlenim. Dvije promjene u naÄinu funkcioniranja tih metoda ne bi oÄuvalo koncept jedinstvenosti projene odreÄ‘ene klase. RjeÅ¡enje datog problema moglo bi se naÄ‡i u tome da izvrÅ¡enje funkcionalnosti dodavanja i brisanja zaposlenika prebacimo u novu klasu koja bi obavljala potrebni rad s bazom i tako kompletiramo i izdvojimo te logiÄki zaokruÅ¾imo i tu funkcionalnost.
 
 2.Otvoreno zatvoren princip 
-Otvoreno zatvoreni princip je zadovoljen za sve klase osim za Hotel i Restoran, jer su one samostalne i ne koriste ni jednu drugu klasu, veæ su one korištene od strane drugih klasa. Te druge klase su Hotel i Restoran i one narušavaju ovaj princip. Hotel narušava zato što bi promjena atributa id klase Zaposlenik ili atributa id klase Soba dovela do promjene metode obrisiZaposlenog i rezervisi respektivno, a promjena klase Narudzba bi dovela do promjene metode obradiNarudzbu klase Restoran.
+Otvoreno zatvoreni princip je zadovoljen za sve klase osim za Hotel i Restoran, jer su one samostalne i ne koriste ni jednu drugu klasu, veÄ‡ su one koriÅ¡tene od strane drugih klasa. Te druge klase su Hotel i Restoran i one naruÅ¡avaju ovaj princip. Hotel naruÅ¡ava zato Å¡to bi promjena atributa id klase Zaposlenik ili atributa id klase Soba dovela do promjene metode obrisiZaposlenog i rezervisi respektivno, a promjena klase Narudzba bi dovela do promjene metode obradiNarudzbu klase Restoran.
 
 3.Liskov princip zamjene
-Mi ne kršimo Liskov princip. Jedino naslijeğivanje koje imamo je iz apstraktne klase Zaposlenik. I Kuhar i Menadzer i Zastitar su svi zaposlenici hotela i svi su meğusobno zamjenjivi.
+Mi ne krÅ¡imo Liskov princip. Jedino naslijeÄ‘ivanje koje imamo je iz apstraktne klase Zaposlenik. I Kuhar i Menadzer i Zastitar su svi zaposlenici hotela i svi su meÄ‘usobno zamjenjivi.
 
 4.Princip inverzije ovisnosti
-Ispoštovan je princip inverzije ovisnosti jer klase ovise od svojih apstrakcija. Zbog interfejsa koje imamo i koji su vezani za skoro svaku klasu našeg sistema, ovaj sistem nije osjetljiv na promjene.
+IspoÅ¡tovan je princip inverzije ovisnosti jer klase ovise od svojih apstrakcija. Zbog interfejsa koje imamo i koji su vezani za skoro svaku klasu naÅ¡eg sistema, ovaj sistem nije osjetljiv na promjene.
 
 5.Princip izoliranja interfejsa
-Ovaj princip je kod nas ispoštovan jer imamo metode koje su neophodne za rad sistema i one su fino rasporeğene u interfejse koji zaokruuju sve zasebne funkcionalnosti.
+Ovaj princip je kod nas ispoÅ¡tovan jer imamo metode koje su neophodne za rad sistema i one su fino rasporeÄ‘ene u interfejse koji zaokruÅ¾uju sve zasebne funkcionalnosti.
