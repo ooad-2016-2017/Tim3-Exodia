@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="FutureHotel.MainPage"
+    x:Class="FutureHotel.LjudskiResursiPregledZaposlenih"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FutureHotel"
@@ -7,14 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,11 +20,9 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Content="Hotel" Grid.Row="1" Grid.Column="1"
-HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
-        <Button Content="Restoran" Grid.Row="2" Grid.Column="1"
-HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
-        <Button Content="Ljudski resursi" Grid.Row="3" Grid.Column="1"
-HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
+        <TextBlock Margin ="5" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0"></TextBlock>
+        <TextBox Margin="5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+        <ListView Margin="5" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
+        
     </Grid>
 </Page>
