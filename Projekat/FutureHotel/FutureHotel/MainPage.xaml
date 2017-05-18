@@ -23,11 +23,11 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Content="Hotel" Grid.Row="1" Grid.Column="1"
+        <Button Name="ButtonHotel" Content="Hotel" Grid.Row="1" Grid.Column="1"
+HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" SizeChanged="ButtonHotel_SizeChanged"></Button>
+        <Button Name="ButtonRestoran" Content="Restoran" Grid.Row="2" Grid.Column="1"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
-        <Button Content="Restoran" Grid.Row="2" Grid.Column="1"
-HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
-        <Button Content="Ljudski resursi" Grid.Row="3" Grid.Column="1"
+        <Button Name="ButtonLjudskiResursi" Content="Ljudski resursi" Grid.Row="3" Grid.Column="1"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonLjudskiResursiClick"></Button>
     </Grid>
 </Page>

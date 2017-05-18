@@ -23,5 +23,25 @@ namespace FutureHotel
         {
             this.InitializeComponent();
         }
+
+        private void TextBlockSlika_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            TextBlock contentTextBlock = sender as TextBlock;
+            if (contentTextBlock != null)
+            {
+                double height = contentTextBlock.Height;
+                if (this.TextBoxSlika.ActualHeight != height)
+                {
+                    double fontsizeMultiplier = this.ButtonSlika.ActualHeight * 0.5;
+                    // Set the new FontSize 
+                    this.TextBlockSlika.FontSize = Math.Floor(fontsizeMultiplier);                    
+                    this.ButtonSlika.FontSize = Math.Floor(fontsizeMultiplier * 0.8);
+                }
+            }
+        }
     }
+
+
+
+    
 }

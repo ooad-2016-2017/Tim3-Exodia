@@ -95,6 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
+      <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ljudski resursi\LjudskiResursiProfil.xaml.cs">
+      <DependentUpon>LjudskiResursiProfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml.cs">
+      <DependentUpon>LjudskiResursiPregledZaposlenih.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ljudski resursi\LjudskiResursiPocetna.xaml.cs">
+      <DependentUpon>LjudskiResursiPocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -132,11 +144,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Ljudski resursi\LjudskiResursiPocetna.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml">
+    <Page Include="Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,7 +152,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml">
+    <Page Include="Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ljudski resursi\LjudskiResursiPocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

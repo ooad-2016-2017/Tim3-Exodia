@@ -1,12 +1,11 @@
 ﻿<Page
-    x:Class="FutureHotel.LjudskiResursiProfil"
+    x:Class="FutureHotel.Ljudski_resursi.LjudskiResursiProfil"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FutureHotel"
+    xmlns:local="using:FutureHotel.Ljudski_resursi"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -28,16 +27,16 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Ime:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="ime" FontSize="40" VerticalAlignment="Top"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Prezime:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="4" Text="prezime" FontSize="40" VerticalAlignment="Top"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="5" Text="Datum rodjenja:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="6" Text="datum" FontSize="40" VerticalAlignment="Top"></TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="1" Text="Slika" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="5" Text="Plata: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="6" Text="plata" FontSize="40" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Name="TextBlock1" Grid.Column="1" Grid.Row="1" Text="Ime:" FontSize="40" VerticalAlignment="Bottom" SizeChanged="TextBlock1_SizeChanged"></TextBlock>
+        <TextBlock Name="TextBlock2" Grid.Column="1" Grid.Row="2" Text="ime" FontSize="40" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Name="TextBlock3" Grid.Column="1" Grid.Row="3" Text="Prezime:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Name="TextBlock4" Grid.Column="1" Grid.Row="4" Text="prezime" FontSize="40" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Name="TextBlock5" Grid.Column="1" Grid.Row="5" Text="Datum rodjenja:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Name="TextBlock6" Grid.Column="1" Grid.Row="6" Text="datum" FontSize="40" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Name="TextBlock7" Grid.Column="2" Grid.Row="1" Text="Slika" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Name="TextBlock8" Grid.Column="2" Grid.Row="5" Text="Plata: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Name="TextBlock9" Grid.Column="2" Grid.Row="6" Text="plata" FontSize="40" VerticalAlignment="Top"></TextBlock>
         <Image Grid.Column="2" Grid.Row="2" Grid.RowSpan="3" Margin="5"></Image>
-        <Button Content="Nazad" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Name="Button1" Content="Nazad" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
     </Grid>
 </Page>

@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="FutureHotel.LjudskiResursiPregledZaposlenih"
+    x:Class="FutureHotel.Ljudski_resursi.LjudskiResursiPregledZaposlenih"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FutureHotel"
+    xmlns:local="using:FutureHotel.Ljudski_resursi"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -20,9 +20,9 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Margin ="5" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0"></TextBlock>
-        <TextBox Margin="5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
-        <ListView Margin="5" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
-        
+        <TextBlock Name="TextBlock1" Margin ="5,0,5,0" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" SizeChanged="TextBlock1_SizeChanged"></TextBlock>
+        <TextBox Name="TextBox1" Margin="5,0,5,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+        <ListView Name="ListView1" Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
+
     </Grid>
 </Page>

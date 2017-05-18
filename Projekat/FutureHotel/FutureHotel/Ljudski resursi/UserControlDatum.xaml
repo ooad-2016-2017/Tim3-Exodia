@@ -12,16 +12,16 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Slika:" FontSize="30" VerticalAlignment="Bottom"></TextBlock>
-        <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Margin="5"></Image>
-        <Button Content="Odaberi sliku" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <TextBlock Name="TextBlockSlika" Grid.Column="0" Grid.Row="0" Text="Slika:" FontSize="30" VerticalAlignment="Bottom" SizeChanged="TextBlockSlika_SizeChanged"></TextBlock>
+        <Image Name="TextBoxSlika" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Margin="5"></Image>
+        <Button Name="ButtonSlika" Content="Odaberi sliku" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
     </Grid>
 </UserControl>
