@@ -26,6 +26,11 @@ namespace FutureHotel
         {
             this.InitializeComponent();
         }
-        
+
+        private void ButtonLjudskiResursiClick(object sender, RoutedEventArgs e)
+        {
+            LjudskiResursiPocetna ljrp = new LjudskiResursiPocetna();
+            
+        }
     }
 }
