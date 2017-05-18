@@ -26,4 +26,4 @@ HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="Butt
         <Button Name="Button2" Content="Pregled zaposlenih" Grid.Row="2" Grid.Column="1"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonPregledZaposlenih"></Button>
     </Grid>
-</Page>
+</Page> 

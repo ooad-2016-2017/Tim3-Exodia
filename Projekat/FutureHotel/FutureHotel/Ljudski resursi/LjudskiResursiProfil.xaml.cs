@@ -42,7 +42,7 @@ namespace FutureHotel.Ljudski_resursi
                 this.TextBlock6.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock7.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock8.FontSize = Math.Floor(fontsizeMultiplier);
-                this.TextBlock9.FontSize = Math.Floor(fontsizeMultiplier);
+                this.TextBlock9.FontSize = Math.Floor(fontsizeMultiplier);  
                 this.Button1.FontSize = Math.Floor(fontsizeMultiplier);
 
             }

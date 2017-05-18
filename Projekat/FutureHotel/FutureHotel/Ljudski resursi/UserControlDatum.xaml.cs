@@ -27,7 +27,7 @@ namespace FutureHotel
         private void TextBlockSlika_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             TextBlock contentTextBlock = sender as TextBlock;
-            if (contentTextBlock != null)
+            if (contentTextBlock != null) 
             {
                 double height = contentTextBlock.Height;
                 if (this.TextBoxSlika.ActualHeight != height)

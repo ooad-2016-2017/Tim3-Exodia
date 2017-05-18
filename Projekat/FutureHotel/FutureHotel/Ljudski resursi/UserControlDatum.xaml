@@ -18,7 +18,7 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions> 
 
         <TextBlock Name="TextBlockSlika" Grid.Column="0" Grid.Row="0" Text="Slika:" FontSize="30" VerticalAlignment="Bottom" SizeChanged="TextBlockSlika_SizeChanged"></TextBlock>
         <Image Name="TextBoxSlika" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Margin="5"></Image>

@@ -29,5 +29,5 @@ HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" SizeChanged
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"></Button>
         <Button Name="ButtonLjudskiResursi" Content="Ljudski resursi" Grid.Row="3" Grid.Column="1"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonLjudskiResursiClick"></Button>
-    </Grid>
+    </Grid> 
 </Page>

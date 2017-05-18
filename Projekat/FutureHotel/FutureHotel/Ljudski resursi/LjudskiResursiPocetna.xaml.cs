@@ -36,7 +36,7 @@ namespace FutureHotel.Ljudski_resursi
         {
             this.Frame.Navigate(typeof(LjudskiResursiPregledZaposlenih));
         }
-        
+         
 
         private void Button1_SizeChanged(object sender, SizeChangedEventArgs e)
         {

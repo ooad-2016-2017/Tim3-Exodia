@@ -43,7 +43,7 @@ namespace FutureHotel
                 // Set the new FontSize 
                 this.ButtonHotel.FontSize = Math.Floor(fontsizeMultiplier);
                 this.ButtonRestoran.FontSize = Math.Floor(fontsizeMultiplier);
-                this.ButtonLjudskiResursi.FontSize = Math.Floor(fontsizeMultiplier);
+                this.ButtonLjudskiResursi.FontSize = Math.Floor(fontsizeMultiplier); 
 
             }
         }

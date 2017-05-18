@@ -25,7 +25,7 @@ namespace FutureHotel.Ljudski_resursi
         public LjudskiResursiUpisZaposlenika()
         {
             this.InitializeComponent();
-        }
+        } 
 
         private void ButtonUnesi(object sender, RoutedEventArgs e)
         {
