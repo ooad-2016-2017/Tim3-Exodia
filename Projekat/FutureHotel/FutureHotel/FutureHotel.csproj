@@ -122,6 +122,21 @@
     <Compile Include="Recepcija\IzabirJezika.xaml.cs">
       <DependentUpon>IzabirJezika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Restoran\Desert.xaml.cs">
+      <DependentUpon>Desert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Restoran\Dodaj_na_stanje.xaml.cs">
+      <DependentUpon>Dodaj_na_stanje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Restoran\Glavno_jelo.xaml.cs">
+      <DependentUpon>Glavno_jelo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Restoran\Predjelo.xaml.cs">
+      <DependentUpon>Predjelo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Restoran\Slanje_narudzbe.xaml.cs">
+      <DependentUpon>Slanje_narudzbe.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -208,7 +223,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\SlanjeNarudzbe.xaml">
+    <Page Include="Restoran\Slanje_narudzbe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
