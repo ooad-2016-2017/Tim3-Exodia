@@ -22,9 +22,18 @@ namespace FutureHotel.Restoran
     /// </summary>
     public sealed partial class Predjelo : Page
     {
+       
         public Predjelo()
         {
             this.InitializeComponent();
+            this.nesto.SomethingHappened += funkc;
         }
+
+
+        async public void funkc(object sender, EventArgs e)
+        {
+            this.Frame.Navigate(typeof(Glavno_jelo));
+        }
+        
     }
 }

@@ -5,7 +5,6 @@
     xmlns:local="using:FutureHotel.Restoran"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:src="using:FutureHotel.Restoran"
     mc:Ignorable="d">
 
     <Grid xmlns:src="using:FutureHotel.Restoran" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -29,6 +28,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Izaberite predjelo: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <src:meni Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Grid.ColumnSpan ="2"  Margin="5"></src:meni>
+        <src:meni x:Name="nesto" Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Grid.ColumnSpan ="2"  Margin="5"></src:meni>
+
     </Grid>
 </Page>

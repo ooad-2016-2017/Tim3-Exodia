@@ -25,6 +25,13 @@ namespace FutureHotel.Restoran
         public Glavno_jelo()
         {
             this.InitializeComponent();
+            this.UK.SomethingHappened += funkc;
+        }
+
+
+        async public void funkc(object sender, EventArgs e)
+        {
+            this.Frame.Navigate(typeof(Desert));
         }
     }
 }

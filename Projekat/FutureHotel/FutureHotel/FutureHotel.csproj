@@ -112,9 +112,13 @@
     </Compile>
     <Compile Include="Model\Hotel.cs" />
     <Compile Include="Model\Jelo.cs" />
+    <Compile Include="Model\Kuhar.cs" />
+    <Compile Include="Model\Menadzer.cs" />
     <Compile Include="Model\Narudzba.cs" />
     <Compile Include="Model\Restoran.cs" />
     <Compile Include="Model\Soba.cs" />
+    <Compile Include="Model\Zaposlenik.cs" />
+    <Compile Include="Model\Zastitar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ljudski resursi\UserControlDatum.xaml.cs">
       <DependentUpon>UserControlDatum.xaml</DependentUpon>
