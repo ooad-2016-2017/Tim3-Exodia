@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Windows;
 using Windows.UI.Popups;
+using FutureHotel.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,10 +28,11 @@ namespace FutureHotel.Restoran
         public event EventHandler SomethingHappened;
         public meni()
         {
+            DataContext = new VMRestoran();
             this.InitializeComponent();
         }
 
-        async public void daljeG_Click(object sender, RoutedEventArgs e)
+        public void daljeG_Click(object sender, RoutedEventArgs e)
         {
             if(this.SomethingHappened != null)
                 this.SomethingHappened(sender,new EventArgs());

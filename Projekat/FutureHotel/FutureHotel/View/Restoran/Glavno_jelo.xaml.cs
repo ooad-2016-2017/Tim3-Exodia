@@ -29,7 +29,7 @@ namespace FutureHotel.Restoran
         }
 
 
-        async public void funkc(object sender, EventArgs e)
+        public void funkc(object sender, EventArgs e)
         {
             this.Frame.Navigate(typeof(Desert));
         }

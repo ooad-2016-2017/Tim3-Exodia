@@ -19,7 +19,7 @@ namespace FutureHotel.Model
         public Zaposlenik(String ime_, String prezime_, DateTime dat, int id_, Image slika_, double plata_) {
             ime = ime_;
             prezime = prezime_;
-            dat = dat_rodjenja;
+            dat_rodjenja = dat; 
             id = id_;
             slika = slika_;
             plata = plata_;

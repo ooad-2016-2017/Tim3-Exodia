@@ -8,13 +8,17 @@ namespace FutureHotel.Model
 {
     public class Jelo
     {
-        private string naziv;
+        public string naziv { get; set; }
         private Dictionary<string, int> sastojci;
+        public string tip;
+        public double cijelna { get; set; }
 
-        public Jelo(string naziv, Dictionary<string, int> sastojci)
+        public Jelo(string naziv, Dictionary<string, int> sastojcim, String tip,double cijena)
         {
             this.Naziv = naziv;
             this.Sastojci = sastojci;
+            this.tip = tip;
+            this.cijelna = cijena;
         }
 
         public string Naziv
@@ -42,5 +46,11 @@ namespace FutureHotel.Model
                 sastojci = value;
             }
         }
+
+        public override string ToString()
+        {
+            return naziv;
+        }
+
     }
 }

@@ -95,16 +95,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
+    <Compile Include="ViewModel\VMRestoran.cs" />
+    <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
       <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ljudski resursi\LjudskiResursiProfil.xaml.cs">
+    <Compile Include="View\Ljudski resursi\LjudskiResursiProfil.xaml.cs">
       <DependentUpon>LjudskiResursiProfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml.cs">
+    <Compile Include="View\Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml.cs">
       <DependentUpon>LjudskiResursiPregledZaposlenih.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ljudski resursi\LjudskiResursiPocetna.xaml.cs">
+    <Compile Include="View\Ljudski resursi\LjudskiResursiPocetna.xaml.cs">
       <DependentUpon>LjudskiResursiPocetna.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -115,36 +116,36 @@
     <Compile Include="Model\Kuhar.cs" />
     <Compile Include="Model\Menadzer.cs" />
     <Compile Include="Model\Narudzba.cs" />
-    <Compile Include="Model\Restoran.cs" />
+    <Compile Include="Model\RestoranModel.cs" />
     <Compile Include="Model\Soba.cs" />
     <Compile Include="Model\Zaposlenik.cs" />
     <Compile Include="Model\Zastitar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ljudski resursi\UserControlDatum.xaml.cs">
+    <Compile Include="View\Ljudski resursi\UserControlDatum.xaml.cs">
       <DependentUpon>UserControlDatum.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Recepcija\IzabirJezika.xaml.cs">
+    <Compile Include="View\Recepcija\IzabirJezika.xaml.cs">
       <DependentUpon>IzabirJezika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Desert.xaml.cs">
+    <Compile Include="View\Restoran\Desert.xaml.cs">
       <DependentUpon>Desert.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Dodaj_na_stanje.xaml.cs">
+    <Compile Include="View\Restoran\Dodaj_na_stanje.xaml.cs">
       <DependentUpon>Dodaj_na_stanje.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Glavno_jelo.xaml.cs">
+    <Compile Include="View\Restoran\Glavno_jelo.xaml.cs">
       <DependentUpon>Glavno_jelo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\meni.xaml.cs">
+    <Compile Include="View\Restoran\meni.xaml.cs">
       <DependentUpon>meni.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Predjelo.xaml.cs">
+    <Compile Include="View\Restoran\Predjelo.xaml.cs">
       <DependentUpon>Predjelo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Pregled_namirnica.xaml.cs">
+    <Compile Include="View\Restoran\Pregled_namirnica.xaml.cs">
       <DependentUpon>Pregled_namirnica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Restoran\Slanje_narudzbe.xaml.cs">
+    <Compile Include="View\Restoran\Slanje_narudzbe.xaml.cs">
       <DependentUpon>Slanje_narudzbe.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -169,19 +170,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml">
+    <Page Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ljudski resursi\LjudskiResursiProfil.xaml">
+    <Page Include="View\Ljudski resursi\LjudskiResursiProfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml">
+    <Page Include="View\Ljudski resursi\LjudskiResursiPregledZaposlenih.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ljudski resursi\LjudskiResursiPocetna.xaml">
+    <Page Include="View\Ljudski resursi\LjudskiResursiPocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,59 +190,60 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Ljudski resursi\UserControlDatum.xaml">
+    <Page Include="View\Ljudski resursi\UserControlDatum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Recepcija\IzabirJezika.xaml">
+    <Page Include="View\Recepcija\IzabirJezika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Recepcija\OdabirSobe.xaml">
+    <Page Include="View\Recepcija\OdabirSobe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Recepcija\RecepcijaPocetna.xaml">
+    <Page Include="View\Recepcija\RecepcijaPocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Recepcija\RecepcijaUzimanjeGlasa.xaml">
+    <Page Include="View\Recepcija\RecepcijaUzimanjeGlasa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Desert.xaml">
+    <Page Include="View\Restoran\Desert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Dodaj_na_stanje.xaml">
+    <Page Include="View\Restoran\Dodaj_na_stanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Glavno_jelo.xaml">
+    <Page Include="View\Restoran\Glavno_jelo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\meni.xaml">
+    <Page Include="View\Restoran\meni.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Predjelo.xaml">
+    <Page Include="View\Restoran\Predjelo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Pregled_namirnica.xaml">
+    <Page Include="View\Restoran\Pregled_namirnica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Restoran\Slanje_narudzbe.xaml">
+    <Page Include="View\Restoran\Slanje_narudzbe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vrata\VrataSnimanjeGlasa.xaml">
+    <Page Include="View\Vrata\VrataSnimanjeGlasa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

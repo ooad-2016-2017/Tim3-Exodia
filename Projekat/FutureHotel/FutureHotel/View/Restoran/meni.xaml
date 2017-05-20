@@ -5,6 +5,7 @@
     xmlns:local="using:FutureHotel.Restoran"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models ="using:FutureHotel.ViewModel"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -19,7 +20,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <ListView Margin="5" Grid.Row="0" Grid.Column="0" ></ListView>
+        <ListView Margin="5" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding sva_jela}" ></ListView>
             <Button Click="daljeG_Click" Name="daljeG" Content="Dalje" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
 
         
