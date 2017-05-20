@@ -8,6 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Margin ="5" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" FontStretch="Undefined"></TextBlock>
+        <TextBox Margin="5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
+        <Button Content="Dodaj" Grid.Row="1" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <ListView Margin="5" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
     </Grid>
 </Page>

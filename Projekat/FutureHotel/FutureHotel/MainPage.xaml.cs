@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using FutureHotel.Ljudski_resursi;
+using FutureHotel.Restoran;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -46,6 +47,11 @@ namespace FutureHotel
                 this.ButtonLjudskiResursi.FontSize = Math.Floor(fontsizeMultiplier); 
 
             }
+        }
+
+        private void ButtonRestoranClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Predjelo));
         }
     }
 }

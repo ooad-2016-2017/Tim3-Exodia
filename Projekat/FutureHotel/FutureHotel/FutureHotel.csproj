@@ -131,8 +131,14 @@
     <Compile Include="Restoran\Glavno_jelo.xaml.cs">
       <DependentUpon>Glavno_jelo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Restoran\meni.xaml.cs">
+      <DependentUpon>meni.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Restoran\Predjelo.xaml.cs">
       <DependentUpon>Predjelo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Restoran\Pregled_namirnica.xaml.cs">
+      <DependentUpon>Pregled_namirnica.xaml</DependentUpon>
     </Compile>
     <Compile Include="Restoran\Slanje_narudzbe.xaml.cs">
       <DependentUpon>Slanje_narudzbe.xaml</DependentUpon>
