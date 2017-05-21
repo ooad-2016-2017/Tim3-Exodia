@@ -19,10 +19,10 @@ namespace FutureHotel.ViewModel
 
         public Jelo jelo_odabrano { get; set; }
         public ObservableCollection<Jelo> sva_jela { get; set; }
-        //dodavanje jela i sastojaka rucno
         public Dictionary<string, int> sastojci = new Dictionary<string, int>();
-        
         public RestoranModel restoran { get; set; }
+        public Jelo predjelo;
+        public Jelo glavnoJelo;
 
         public ICommand dodaj_jelo { get; set; }
         public ICommand dodaj_jelo0 { get; set; }
@@ -30,15 +30,32 @@ namespace FutureHotel.ViewModel
 
         public VMRestoran()
         {
+            ucitaj();
+        }
+
+        public VMRestoran(Jelo jelo)
+        {
+            ucitaj();
+            narucene_stavke.Add(jelo);
+        }
+
+        public VMRestoran(ObservableCollection<Jelo> jela)
+        {
+            ucitaj();
+            narucene_stavke = jela;
+        }
+
+        public void ucitaj()
+        {
             narucene_stavke = new ObservableCollection<Jelo>();
             sastojci.Add("So", 500);
             sastojci.Add("Brasno", 1000);
-            Jelo pita = new Jelo("pita", sastojci, "Predjelo",5.5);
+            Jelo pita = new Jelo("pita", sastojci, "Predjelo", 5.5);
             sva_jela = new ObservableCollection<Jelo>();
             //narucene_stavke.Add(pita);
             sva_jela.Add(pita);
             Jelo kolac = new Jelo("kolač", sastojci, "Desert", 3);
-            Jelo corba = new Jelo("corba", sastojci, "Glavno",8);
+            Jelo corba = new Jelo("corba", sastojci, "Glavno", 8);
             sva_jela.Add(kolac);
             sva_jela.Add(corba);
             jelo_odabrano = new Jelo(sva_jela[0]);
@@ -50,9 +67,7 @@ namespace FutureHotel.ViewModel
 
         async  void PosaljiNarudzbu(object param)
         {
-            this.narucene_stavke = (ObservableCollection<Jelo>)param;
             narucene_stavke.Add(jelo_odabrano);
-            jelo_odabrano = null;
             String novi = "Jela koja ste poručili: \n";
             for(int i=0;i<narucene_stavke.Count;i++)
             {
@@ -61,24 +76,22 @@ namespace FutureHotel.ViewModel
             var dialog = new MessageDialog(novi);
             await dialog.ShowAsync();
         }
+
         public void DodajPredjelo(object param)
         {
             var frame = (Frame)Window.Current.Content;
             narucene_stavke.Add(jelo_odabrano);
-            jelo_odabrano = null;
-            frame.Navigate(typeof(Glavno_jelo), narucene_stavke);
+            VMRestoran vmr = new VMRestoran(jelo_odabrano);
+            frame.Navigate(typeof(Glavno_jelo), vmr);
         }
 
 
         public void DodajJelo(object param)
         {
-            this.narucene_stavke = (ObservableCollection<Jelo>)param;
-            
-                var frame = (Frame)Window.Current.Content;
-                narucene_stavke.Add(jelo_odabrano);
-                jelo_odabrano = null;
-                frame.Navigate(typeof(Desert), narucene_stavke);
-            
+            var frame = (Frame)Window.Current.Content;
+            narucene_stavke.Add(jelo_odabrano);
+            VMRestoran vmr = new VMRestoran(narucene_stavke);
+            frame.Navigate(typeof(Desert), vmr);
         }
         public bool moze(object pram)
         {

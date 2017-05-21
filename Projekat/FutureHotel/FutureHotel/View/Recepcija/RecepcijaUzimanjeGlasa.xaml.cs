@@ -28,7 +28,7 @@ namespace FutureHotel.View.Recepcija
         {
             this.InitializeComponent();
         }
-        async protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             DataContext = (VMRezervacija)e.Parameter;
         }

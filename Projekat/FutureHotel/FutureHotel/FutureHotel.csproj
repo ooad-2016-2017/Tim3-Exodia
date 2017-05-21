@@ -97,7 +97,10 @@
     </Compile>
     <Compile Include="Model\Gost.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\VMDesert.cs" />
+    <Compile Include="ViewModel\VMGlavnoJelo.cs" />
     <Compile Include="ViewModel\VMHotelRezervacija.cs" />
+    <Compile Include="ViewModel\VMPredjelo.cs" />
     <Compile Include="ViewModel\VMRestoran.cs" />
     <Compile Include="ViewModel\VMRezervacija.cs" />
     <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">

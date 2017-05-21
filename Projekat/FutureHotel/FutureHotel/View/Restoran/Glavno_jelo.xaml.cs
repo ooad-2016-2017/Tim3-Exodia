@@ -27,18 +27,13 @@ namespace FutureHotel.Restoran
         {
             this.InitializeComponent();
 
-            DataContext = new VMRestoran();
             //this.UK.SomethingHappened += funkc;
         }
 
 
-        public void funkc(object sender, EventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.Frame.Navigate(typeof(Desert));
-        }
-        private void daljeG_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Desert));
+            DataContext = (VMRestoran)e.Parameter;
         }
     }
 }
