@@ -1,4 +1,5 @@
-﻿using FutureHotel.Model;
+﻿using FutureHotel.Ljudski_resursi;
+using FutureHotel.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,6 +10,7 @@ using System.Windows.Input;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace FutureHotel.ViewModel
 {
@@ -19,7 +21,9 @@ namespace FutureHotel.ViewModel
         public List<Soba> s { get; set; }
         public ObservableCollection<Zaposlenik> zaposleni { get; set; }
         public String rijec { get; set; }
+        public object selektovani { get; set; }
         public ICommand komanda { get; set; }
+        public ICommand komandaPregled { get; set; }
 
 
         public VMPretragaZaposleni()
@@ -28,6 +32,7 @@ namespace FutureHotel.ViewModel
             rijec = "";
             ucitaj();
             komanda = new RelayCommand<object>(pretraga, moze);
+            komandaPregled = new RelayCommand<object>(pregled, moze);
             hotel = new Hotel(zap, s, null);
         }
 
@@ -51,6 +56,22 @@ namespace FutureHotel.ViewModel
                 {
                     zaposleni.Add(hotel.zaposleni[i]);
                 }
+            }
+        }
+
+        public async void pregled(object param)
+        {
+            var frame = (Frame)Window.Current.Content;
+            if (selektovani == null)
+            {
+                var dialog = new MessageDialog("Niko nije selektovan");
+                await dialog.ShowAsync();
+                //return;
+            }
+            else
+            {
+                VMLjudskiResursiProfil vmr = new VMLjudskiResursiProfil((Zaposlenik)selektovani);
+                frame.Navigate(typeof(LjudskiResursiProfil), vmr);
             }
         }
     }

@@ -95,12 +95,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160417074328_Migracija.cs" />
+    <Compile Include="Migrations\20160417074328_Migracija.designer.cs">
+      <DependentUpon>20160417074328_Migracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\RestoranDbContextModelSnapshot.cs" />
     <Compile Include="Model\Gost.cs" />
+    <Compile Include="Model\RestoranBaza.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\VMHotelRezervacija.cs" />
+    <Compile Include="ViewModel\VMLjudskiResursiProfil.cs" />
     <Compile Include="ViewModel\VMPretragaZaposleni.cs" />
     <Compile Include="ViewModel\VMRestoran.cs" />
     <Compile Include="ViewModel\VMRezervacija.cs" />
+    <Compile Include="ViewModel\VMZaposleni.cs" />
     <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
       <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
     </Compile>

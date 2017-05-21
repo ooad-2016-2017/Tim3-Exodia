@@ -58,20 +58,25 @@ namespace FutureHotel.ViewModel
             Jelo corba = new Jelo("corba", sastojci, "Glavno", 8);
             sva_jela.Add(kolac);
             sva_jela.Add(corba);
-            jelo_odabrano = new Jelo(sva_jela[0]);
             restoran = new RestoranModel(sastojci, sva_jela);
             dodaj_jelo = new RelayCommand<Object>(PosaljiNarudzbu, moze);
             dodaj_jelo1 = new RelayCommand<Object>(DodajPredjelo, moze);
             dodaj_jelo0 = new RelayCommand<Object>(DodajJelo, moze);
         }
 
-        async  void PosaljiNarudzbu(object param)
+        async void PosaljiNarudzbu(object param)
         {
             narucene_stavke.Add(jelo_odabrano);
             String novi = "Jela koja ste poručili: \n";
             for(int i=0;i<narucene_stavke.Count;i++)
             {
                 novi += narucene_stavke[i] + "\n";
+            }
+            if(novi == "Jela koja ste poručili: \n\n\n\n")
+            {
+                var dialogg = new MessageDialog("Niste nista narucili!");
+                await dialogg.ShowAsync();
+                return;
             }
             var dialog = new MessageDialog(novi);
             await dialog.ShowAsync();
