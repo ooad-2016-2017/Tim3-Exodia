@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,10 @@ namespace FutureHotel.Ljudski_resursi
         public LjudskiResursiPregledZaposlenih()
         {
             this.InitializeComponent();
+            DataContext = new VMPretragaZaposleni();
         }
+
+        public object VMPretragaZaposlenih { get; private set; }
 
         private void TextBlock1_SizeChanged(object sender, SizeChangedEventArgs e)
         {

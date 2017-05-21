@@ -72,5 +72,12 @@ namespace FutureHotel.Model
             this.ZauzetaDo = zauzetaDo;
             this.Gost = gost;
         }
+
+        public Soba(int id, int brojKreveta)
+        {
+            this.Id = id;
+            this.BrojKreveta = brojKreveta;
+            
+        }
     }
 }

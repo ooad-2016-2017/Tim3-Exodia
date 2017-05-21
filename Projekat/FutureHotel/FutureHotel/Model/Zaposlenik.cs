@@ -25,5 +25,21 @@ namespace FutureHotel.Model
             plata = plata_;
 
         }
+
+        public Zaposlenik(String ime_, String prezime_, DateTime dat, int id_, double plata_)
+        {
+            ime = ime_;
+            prezime = prezime_;
+            dat_rodjenja = dat;
+            id = id_;
+            plata = plata_;
+
+        }
+
+        public override string ToString()
+        {
+            return ime + " " + prezime;
+        }
+
     }
 }

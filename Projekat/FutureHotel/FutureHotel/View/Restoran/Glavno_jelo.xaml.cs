@@ -30,7 +30,6 @@ namespace FutureHotel.Restoran
             //this.UK.SomethingHappened += funkc;
         }
 
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             DataContext = (VMRestoran)e.Parameter;

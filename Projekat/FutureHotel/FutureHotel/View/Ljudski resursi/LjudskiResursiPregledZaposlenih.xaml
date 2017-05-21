@@ -21,8 +21,8 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Name="TextBlock1" Margin ="5,0,5,0" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" SizeChanged="TextBlock1_SizeChanged"></TextBlock>
-        <TextBox Name="TextBox1" Margin="5,0,5,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
-        <ListView Name="ListView1" Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
+        <TextBox Name="tbPretraga" Margin="5,0,5,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextChanged="{Binding Path=rijec}"></TextBox>
+        <ListView ItemsSource="{Binding Path=zaposleni, Mode=OneWay}" Name="ListView1" Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
 
     </Grid>
 </Page> 
