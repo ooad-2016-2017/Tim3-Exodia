@@ -21,5 +21,10 @@ namespace FutureHotel.Model
             this.sobe = _sobe;
             this.gosti = _gosti;
         }
+
+        public Hotel()
+        {
+
+        }
     }
 }

@@ -39,7 +39,6 @@ namespace FutureHotel.Ljudski_resursi
                 this.tbPretraga.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock1.FontSize = Math.Floor(fontsizeMultiplier);
                 this.ListView1.FontSize = Math.Floor(fontsizeMultiplier);
-                 
             }
         }
 

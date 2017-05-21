@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace FutureHotel.Ljudski_resursi
             this.InitializeComponent();
         }
 
-        private void TextBlock1_SizeChanged(object sender, SizeChangedEventArgs e)
+        /*private void TextBlock1_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             TextBlock contentTextBlock = sender as TextBlock;
             if (contentTextBlock != null)
@@ -46,6 +47,11 @@ namespace FutureHotel.Ljudski_resursi
                 this.Button1.FontSize = Math.Floor(fontsizeMultiplier);
 
             }
+        }*/
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (VMLjudskiResursiProfil)e.Parameter;
         }
     }
 }

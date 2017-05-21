@@ -22,8 +22,10 @@
 
         <TextBlock Name="TextBlock1" Margin ="5,0,5,0" Text="Pretraga:" FontSize="50" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0"></TextBlock>
         <TextBox Name="tbPretraga" Margin="5,0,5,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Path=rijec, Mode=TwoWay}" SizeChanged="tbPretraga_SizeChanged"></TextBox>
-        <ListView ItemsSource="{Binding Path=zaposleni, Mode=TwoWay}" Name="ListView1" Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
+        <ListView ItemsSource="{Binding Path=zaposleni, Mode=TwoWay}" Name="ListView1"
+                  SelectedValue="{Binding Path=selektovani, Mode=TwoWay}"
+                  Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
         <Button Name="bPretraga" Margin="5,0,5,0" Command="{Binding Path=komanda}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Pretrazi" FontSize="20"></Button>
-        
+        <Button Name="bPregled" Margin="5,0,5,0" Command="{Binding Path=komandaPregled}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Pregledaj" FontSize="20"></Button>
     </Grid>
 </Page> 

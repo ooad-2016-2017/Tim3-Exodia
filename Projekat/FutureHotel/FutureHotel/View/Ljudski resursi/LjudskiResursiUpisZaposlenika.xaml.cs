@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace FutureHotel.Ljudski_resursi
         public LjudskiResursiUpisZaposlenika()
         {
             this.InitializeComponent();
+            DataContext = new VMZaposleni();
         } 
 
         private void ButtonUnesi(object sender, RoutedEventArgs e)
@@ -38,20 +40,20 @@ namespace FutureHotel.Ljudski_resursi
             if (contentTextBlock != null)
             {
                 double height = contentTextBlock.Height;
-                if (this.ContextTextBox.ActualHeight != height)
+                if (this.TextBoxIme.ActualHeight != height)
                 {
-                    double fontsizeMultiplier = this.ContextTextBox.ActualHeight * 0.5;
+                    double fontsizeMultiplier = this.TextBoxIme.ActualHeight * 0.5;
                     // Set the new FontSize 
                     this.TextBlockIme.FontSize = Math.Floor(fontsizeMultiplier);
                     this.TextBlockDatum.FontSize = Math.Floor(fontsizeMultiplier);
                     this.TextBlockPlata.FontSize = Math.Floor(fontsizeMultiplier);
                     this.TextBlockPrezime.FontSize = Math.Floor(fontsizeMultiplier);
-                    this.ContextTextBox.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.TextBoxIme.FontSize = Math.Floor(fontsizeMultiplier);
                     this.TextBoxPrezime.FontSize = Math.Floor(fontsizeMultiplier);
                     this.TextBoxPlata.FontSize = Math.Floor(fontsizeMultiplier);
                     this.ButtonUnesi1.FontSize = Math.Floor(fontsizeMultiplier * 0.5);
                     this.DatePicker.FontSize = Math.Floor(fontsizeMultiplier * 0.8);
-                    this.DatePicker.Width = this.ContextTextBox.ActualWidth;
+                    this.DatePicker.Width = this.TextBoxIme.ActualWidth;
                 }
             }
         }
