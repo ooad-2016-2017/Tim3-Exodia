@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ namespace FutureHotel.Model
     public class RestoranModel
     {
         private Dictionary<string, int> sastojci;
-        public List<Jelo> predjela;
-        public List<Jelo> glavna_jela;
-        public List<Jelo> deserti;
+        public ObservableCollection<Jelo> predjela { get; set; }
+        public ObservableCollection<Jelo> glavna_jela { get; set; }
+        public ObservableCollection<Jelo> deserti { get; set; }
 
         public Dictionary<string, int> Sastojci
         {
@@ -28,11 +29,11 @@ namespace FutureHotel.Model
 
         
 
-        public RestoranModel(Dictionary<string, int> sastojci, List<Jelo> jela)
+        public RestoranModel(Dictionary<string, int> sastojci, ObservableCollection<Jelo> jela)
         {
-            predjela = new List<Jelo>();
-            glavna_jela = new List<Jelo>();
-            deserti = new List<Jelo>();
+            predjela = new ObservableCollection<Jelo>();
+            glavna_jela = new ObservableCollection<Jelo>();
+            deserti = new ObservableCollection<Jelo>();
             this.Sastojci = sastojci;
             for (int i = 0; i < jela.Count; i++)
             {

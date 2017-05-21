@@ -5,7 +5,33 @@
     xmlns:local="using:FutureHotel.Restoran"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:FutureHotel.Model"
+    xmlns:xaml="using:Windows.UI.Xaml"
+    xmlns:xaml1="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <!--models namespace definiran u Page xmlns:local
+        Ako ne prepoznaje StavkaKorpe uraditi build sa xmlns:local u page pa onda unijeti DataType atribut nakon sto je build ispravan-->
+        <xaml1:DataTemplate x:Key="KomponentaListTemplate"  x:DataType="models:Jelo">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!--Auto, ne * jer bi onda redovi bili rasireni do dna forme. Auto zauzima onoliko koliko mu treba-->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--Iz ViewModela koji je povezan sa Page ce uzeti objekat Komponenta i njen naziv staviti u textblok-->
+                <TextBlock Text="{x:Bind naziv}" Grid.Column="0" />
+                <!--Kolicina i Cijena su direkt u view modelu. POTREBNO JE IMATI PUBLIC GET I SET tj ispravan Property da bi binding radio-->
+
+                <TextBlock Text="{x:Bind cijelna}" Grid.Column="1"/>
+            </Grid>
+        </xaml1:DataTemplate>
+    </Page.Resources>
 
     <Grid xmlns:src="using:FutureHotel.Restoran" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -28,7 +54,37 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Izaberite glavno jelo: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <src:meni x:Name="UK" Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Grid.ColumnSpan ="2"  Margin="5"></src:meni>
+        <Button Click="daljeG_Click_1" Name="daljeG" Content="Dalje" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+
+        <ListView x:Name="RestoraniListView" ItemTemplate="{StaticResource KomponentaListTemplate}" Margin="5" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding restoran.glavna_jela}" Grid.RowSpan="5" Grid.ColumnSpan="2" >
+            <ListView.Template>
+                <!--Rucno mjenjanje liste kako bi se dodali naslovi (headers) kolona
+                Na ovaj nacin se rucno mogu dodati neke kontrole u listu za specijalne liste.-->
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Column="0">Komponenta</TextBlock>
+                            <TextBlock  Grid.Column="1">Cijena</TextBlock>
+                        </Grid>
+                        <!-- Ostatak da bude lista koja je orginalno trebala biti -->
+                        <ItemsPresenter Grid.Row="1"></ItemsPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </ListView.Template>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
 
     </Grid>
 </Page>

@@ -8,6 +8,8 @@
     xmlns:models ="using:FutureHotel.ViewModel"
     mc:Ignorable="d">
 
+    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
 
