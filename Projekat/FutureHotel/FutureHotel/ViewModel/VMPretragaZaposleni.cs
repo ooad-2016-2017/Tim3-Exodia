@@ -6,7 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Core;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 
 namespace FutureHotel.ViewModel
 {
@@ -39,7 +41,7 @@ namespace FutureHotel.ViewModel
         {
             return true;
         }
-
+        
         public void pretraga(object param)
         {
             zaposleni.Clear();
@@ -50,7 +52,6 @@ namespace FutureHotel.ViewModel
                     zaposleni.Add(hotel.zaposleni[i]);
                 }
             }
-            var dialog = new MessageDialog(zaposleni[0].ToString());
         }
     }
 }
