@@ -33,7 +33,6 @@ namespace FutureHotel.Model
             dat_rodjenja = dat;
             id = id_;
             plata = plata_;
-
         }
 
         public override string ToString()
