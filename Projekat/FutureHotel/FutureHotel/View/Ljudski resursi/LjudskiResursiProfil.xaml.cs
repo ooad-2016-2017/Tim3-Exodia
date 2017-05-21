@@ -33,7 +33,7 @@ namespace FutureHotel.Ljudski_resursi
             TextBlock contentTextBlock = sender as TextBlock;
             if (contentTextBlock != null)
             {
-                double fontsizeMultiplier = this.TextBlock1.ActualHeight * 0.5;
+                double fontsizeMultiplier = this.Button1.ActualHeight * 0.6;
                 // Set the new FontSize 
                 this.TextBlock1.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock2.FontSize = Math.Floor(fontsizeMultiplier);
@@ -44,7 +44,7 @@ namespace FutureHotel.Ljudski_resursi
                 this.TextBlock7.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock8.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock9.FontSize = Math.Floor(fontsizeMultiplier);  
-                this.Button1.FontSize = Math.Floor(fontsizeMultiplier);
+                this.Button1.FontSize = Math.Floor(fontsizeMultiplier * 0.7);
 
             }
         }
