@@ -22,6 +22,6 @@
 
         <TextBlock Name="TextBlockSlika" Grid.Column="0" Grid.Row="0" Text="Slika:" FontSize="30" VerticalAlignment="Bottom" SizeChanged="TextBlockSlika_SizeChanged"></TextBlock>
         <Image Name="TextBoxSlika" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Margin="5"></Image>
-        <Button Name="ButtonSlika" Content="Odaberi sliku" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Background="#FFffcecf" Foreground="#FF262625" Name="ButtonSlika" Content="Odaberi sliku" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
     </Grid>
 </UserControl>

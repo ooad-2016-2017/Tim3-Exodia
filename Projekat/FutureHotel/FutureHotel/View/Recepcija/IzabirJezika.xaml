@@ -19,6 +19,6 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Izaberite jezik:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <ComboBox Name="cbJezici" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"></ComboBox>
+        <ComboBox Background="#FFffcecf" Foreground="#FF262625" Name="cbJezici" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"></ComboBox>
     </Grid>
 </UserControl>

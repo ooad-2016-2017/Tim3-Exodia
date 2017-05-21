@@ -27,7 +27,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name="TextBlock1" Grid.Column="1" Grid.Row="1" Text="Ime:" FontSize="40" VerticalAlignment="Bottom" ></TextBlock>
+        <TextBlock Name="TextBlock1" Grid.Column="1" Grid.Row="1" Text="Ime:" FontSize="40" VerticalAlignment="Bottom" SizeChanged="TextBlock1_SizeChanged"></TextBlock>
         <TextBlock Name="TextBlock2" Grid.Column="1" Grid.Row="2" Text="{Binding Path=zaposlenik.ime}" FontSize="40" VerticalAlignment="Top"></TextBlock>
         <TextBlock Name="TextBlock3" Grid.Column="1" Grid.Row="3" Text="Prezime:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
         <TextBlock Name="TextBlock4" Grid.Column="1" Grid.Row="4" Text="{Binding Path=zaposlenik.prezime}" FontSize="40" VerticalAlignment="Top"></TextBlock>
@@ -37,6 +37,6 @@
         <TextBlock Name="TextBlock8" Grid.Column="2" Grid.Row="5" Text="Plata: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
         <TextBlock Name="TextBlock9" Grid.Column="2" Grid.Row="6" Text="{Binding Path=zaposlenik.plata}" FontSize="40" VerticalAlignment="Top"></TextBlock>
         <Image Grid.Column="2" Grid.Row="2" Grid.RowSpan="3" Margin="5"></Image>
-        <Button Name="Button1" Content="Nazad" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Background="#FFffcecf" Foreground="#FF262625" Name="Button1" Content="Nazad" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
     </Grid>
 </Page> 

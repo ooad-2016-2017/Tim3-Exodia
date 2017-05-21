@@ -71,7 +71,7 @@
             Text="Info4"
             FontSize="81"
         ></TextBlock>
-        <Button
+        <Button Background="#FFffcecf" Foreground="#FF262625"
             Content="Unesi"
             Grid.Column="2"
             Grid.Row="6"
