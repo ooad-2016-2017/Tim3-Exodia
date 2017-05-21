@@ -23,6 +23,7 @@ namespace FutureHotel.Recepcija
         {
             this.InitializeComponent();
             cbJezici.Items.Add("Bosanski");
+            cbJezici.SelectedItem = "Bosanski";
         }
     }
 }
