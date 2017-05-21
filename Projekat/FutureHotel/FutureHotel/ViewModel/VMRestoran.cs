@@ -64,13 +64,19 @@ namespace FutureHotel.ViewModel
             dodaj_jelo0 = new RelayCommand<Object>(DodajJelo, moze);
         }
 
-        async  void PosaljiNarudzbu(object param)
+        async void PosaljiNarudzbu(object param)
         {
             narucene_stavke.Add(jelo_odabrano);
             String novi = "Jela koja ste poručili: \n";
             for(int i=0;i<narucene_stavke.Count;i++)
             {
                 novi += narucene_stavke[i] + "\n";
+            }
+            if(novi == "Jela koja ste poručili: \n\n\n\n")
+            {
+                var dialogg = new MessageDialog("Niste nista narucili!");
+                await dialogg.ShowAsync();
+                return;
             }
             var dialog = new MessageDialog(novi);
             await dialog.ShowAsync();
