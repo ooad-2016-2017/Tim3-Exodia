@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Migrations\RestoranDbContextModelSnapshot.cs" />
     <Compile Include="Model\Gost.cs" />
+    <Compile Include="Model\Narudzba.cs" />
     <Compile Include="Model\RestoranBaza.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\VMHotelRezervacija.cs" />
@@ -128,7 +129,6 @@
     <Compile Include="Model\Jelo.cs" />
     <Compile Include="Model\Kuhar.cs" />
     <Compile Include="Model\Menadzer.cs" />
-    <Compile Include="Model\Narudzba.cs" />
     <Compile Include="Model\RestoranModel.cs" />
     <Compile Include="Model\Soba.cs" />
     <Compile Include="Model\Zaposlenik.cs" />

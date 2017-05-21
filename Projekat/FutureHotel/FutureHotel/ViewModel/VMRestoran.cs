@@ -43,6 +43,29 @@ namespace FutureHotel.ViewModel
         {
             ucitaj();
             narucene_stavke = jela;
+
+        }
+
+        public void UpisiUBazu(ObservableCollection<Jelo> stavke)
+        {
+            using (var db = new RestoranBaza())
+            {
+                //RestoraniIS.ItemsSource = db.Restorani.OrderBy(c => c.Naziv).ToList();
+
+                var contact = new Narudzba
+                {
+                    idStola = 20,
+                    predjelo_ = stavke[0],
+                    glavno_=stavke[1],
+                    desert_ = stavke[2],
+                    UkupnaCijena = (int)(stavke[0].cijelna + stavke[1].cijelna + stavke[2].cijelna)
+
+                };
+                db.Restorani.Add(contact);
+                //SaveChanges obavezno da se reflektuju izmjene u bazi, tek tada dolazi do komunikacije sa bazom
+                db.SaveChanges();
+                //refresh liste restorana
+            }
         }
 
         public void ucitaj()
@@ -80,6 +103,8 @@ namespace FutureHotel.ViewModel
             }
             var dialog = new MessageDialog(novi);
             await dialog.ShowAsync();
+
+            UpisiUBazu(narucene_stavke);
         }
 
         public void DodajPredjelo(object param)

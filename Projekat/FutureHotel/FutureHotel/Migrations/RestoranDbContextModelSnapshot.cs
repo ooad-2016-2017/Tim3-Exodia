@@ -16,27 +16,27 @@ namespace OoadProjekatBazaMigrations
 
             builder.Entity("", b =>
                 {
-                    b.Property<int>("NarudzbaId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<float>("UkupnaCIjena");
+                    b.Property<float>("UkupnaCijena");
 
                     //b.Property<float>("GeoSirina");
 
-                    b.Property<string>("Predjelo1");
+                    b.Property<string>("predjelo_");
 
-                    b.Property<string>("GlavnoJelo1");
+                    b.Property<string>("glavno_");
 
                    // b.Property<float>("Rating");
 
                    // b.Property<byte[]>("Slika")
                     //    .Annotation("Relational:ColumnType", "image");
 
-                    b.Property<string>("Desert1");
+                    b.Property<string>("desert_");
 
                     //b.Property<string>("fourSqaureId");
 
-                    b.Key("NarudzbaId");
+                    b.Key("id");
                 });
         }
     }

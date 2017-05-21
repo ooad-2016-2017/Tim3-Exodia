@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,54 +9,26 @@ namespace FutureHotel.Model
 {
     public class Narudzba
     {
-        private int idStola;
-        private List<Jelo> jela;
-        private int id;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int id { get; set; }
+        public int idStola { get; set; }
+        public Jelo predjelo_ { get; set; }
+        public Jelo glavno_ { get; set; }
+        public Jelo desert_ { get; set; }
+        
+        public int UkupnaCijena { get; set; }
 
-        public int IdStola
+
+
+       /* public Narudzba(int id,int idStola,Jelo pre,Jelo glv, Jelo des)
         {
-            get
-            {
-                return idStola;
-            }
+            this.id = id;
 
-            set
-            {
-                idStola = value;
-            }
-        }
-
-        public List<Jelo> Jela
-        {
-            get
-            {
-                return jela;
-            }
-
-            set
-            {
-                jela = value;
-            }
-        }
-
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-
-            set
-            {
-                id = value;
-            }
-        }
-
-        public Narudzba(int idStola, List<Jelo> jela, int id)
-        {
-            this.IdStola = idStola;
-            this.Jela = jela;
-            this.Id = id;
-        }
+            this.idStola = idStola;
+            predjelo_ = pre;
+            glavno_ = glv;
+            desert_ = des;
+            
+        }*/
     }
 }
