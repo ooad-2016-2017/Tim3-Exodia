@@ -127,6 +127,15 @@
     <Compile Include="View\Recepcija\IzabirJezika.xaml.cs">
       <DependentUpon>IzabirJezika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Recepcija\OdabirSobe.xaml.cs">
+      <DependentUpon>OdabirSobe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Recepcija\RecepcijaPocetna.xaml.cs">
+      <DependentUpon>RecepcijaPocetna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Recepcija\RecepcijaUzimanjeGlasa.xaml.cs">
+      <DependentUpon>RecepcijaUzimanjeGlasa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Restoran\Desert.xaml.cs">
       <DependentUpon>Desert.xaml</DependentUpon>
     </Compile>
@@ -147,6 +156,9 @@
     </Compile>
     <Compile Include="View\Restoran\Slanje_narudzbe.xaml.cs">
       <DependentUpon>Slanje_narudzbe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Vrata\VrataSnimanjeGlasa.xaml.cs">
+      <DependentUpon>VrataSnimanjeGlasa.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
