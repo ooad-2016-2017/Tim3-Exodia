@@ -21,9 +21,9 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Name="Button1" Content="Upis novog zaposlenika" Grid.Row="1" Grid.Column="1" SizeChanged="Button1_SizeChanged"
+        <Button Background="#FFffcecf" Foreground="#FF262625" Name="Button1" Content="Upis novog zaposlenika" Grid.Row="1" Grid.Column="1" SizeChanged="Button1_SizeChanged"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonUpisNovogZaposlenika"></Button>
-        <Button Name="Button2" Content="Pregled zaposlenih" Grid.Row="2" Grid.Column="1"
+        <Button Background="#FFffcecf" Foreground="#FF262625" Name="Button2" Content="Pregled zaposlenih" Grid.Row="2" Grid.Column="1"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonPregledZaposlenih"></Button>
     </Grid>
 </Page> 

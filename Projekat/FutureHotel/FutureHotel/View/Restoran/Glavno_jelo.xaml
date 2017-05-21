@@ -54,7 +54,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Izaberite glavno jelo: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <Button Command="{Binding Path=dodaj_jelo0}" Name="daljeG" Content="Dalje" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Background="#FFffcecf" Foreground="#FF262625" Command="{Binding Path=dodaj_jelo0}" Name="daljeG" Content="Dalje" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
 
         <ListView x:Name="RestoraniListView" ItemTemplate="{StaticResource KomponentaListTemplate}" Margin="5" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding restoran.glavna_jela}"
                   Grid.RowSpan="5" Grid.ColumnSpan="2"

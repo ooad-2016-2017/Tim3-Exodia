@@ -22,6 +22,6 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Pritisnite dugme za snimanje glasa" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Snimi" FontSize="40"></Button>
+        <Button Background="#FFffcecf" Foreground="#FF262625" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Snimi" FontSize="40"></Button>
     </Grid>
 </Page>
