@@ -29,21 +29,23 @@ namespace FutureHotel.Ljudski_resursi
             DataContext = new VMPretragaZaposleni();
         }
 
-        public object VMPretragaZaposlenih { get; private set; }
-
-        private void TextBlock1_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void tbPretraga_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             TextBlock contentTextBlock = sender as TextBlock;
             if (contentTextBlock != null)
             {
                
-                double fontsizeMultiplier = this.TextBox1.ActualHeight * 0.5;
-                // Set the new FontSize 
-                this.TextBox1.FontSize = Math.Floor(fontsizeMultiplier);
+                double fontsizeMultiplier = this.tbPretraga.ActualHeight * 0.5;
+                this.tbPretraga.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock1.FontSize = Math.Floor(fontsizeMultiplier);
                 this.ListView1.FontSize = Math.Floor(fontsizeMultiplier);
                  
             }
+        }
+
+        private void tbPretraga_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

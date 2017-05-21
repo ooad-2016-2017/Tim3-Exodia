@@ -1,24 +1,31 @@
 ﻿using FutureHotel.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace FutureHotel.ViewModel
 {
-    class VMPretragaZaposleni
+    public class VMPretragaZaposleni
     {
         public Hotel hotel {get;set;}
-        List<Zaposlenik> zap { get; set; }
-        List<Soba> s { get; set; }
-        List<Zaposlenik> zaposleni { get; set; }
+        public List<Zaposlenik> zap { get; set; }
+        public List<Soba> s { get; set; }
+        public ObservableCollection<Zaposlenik> zaposleni { get; set; }
         public String rijec { get; set; }
+        public ICommand komanda { get; set; }
 
 
         public VMPretragaZaposleni()
         {
+            zaposleni = new ObservableCollection<Zaposlenik>();
+            rijec = "";
             ucitaj();
+            komanda = new RelayCommand<object>(pretraga, moze);
             hotel = new Hotel(zap, s, null);
         }
 
@@ -28,9 +35,14 @@ namespace FutureHotel.ViewModel
             zap.Add(new Zaposlenik("Meho", "Aljo", new DateTime(1, 1, 1), 1, 120));
         }
 
-        public void pretraga()
+        public bool moze(object param)
         {
-            zaposleni = new List<Zaposlenik>();
+            return true;
+        }
+
+        public void pretraga(object param)
+        {
+            zaposleni.Clear();
             for(int i=0; i<hotel.zaposleni.Count; i++)
             {
                 if(hotel.zaposleni[i].ToString().Contains(rijec))
@@ -38,6 +50,7 @@ namespace FutureHotel.ViewModel
                     zaposleni.Add(hotel.zaposleni[i]);
                 }
             }
+            var dialog = new MessageDialog(zaposleni[0].ToString());
         }
     }
 }
