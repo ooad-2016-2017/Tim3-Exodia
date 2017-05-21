@@ -25,7 +25,7 @@ namespace FutureHotel.ViewModel
             sastojci.Add("Brasno", 1000);
             Jelo pita = new Jelo("pita", sastojci, "Predjelo",5.5);
             sva_jela = new ObservableCollection<Jelo>();
-            narucene_stavke.Add(pita);
+            //narucene_stavke.Add(pita);
             sva_jela.Add(pita);
             Jelo kolac = new Jelo("kolač", sastojci, "Desert", 3);
             Jelo corba = new Jelo("corba", sastojci, "Glavno",8);

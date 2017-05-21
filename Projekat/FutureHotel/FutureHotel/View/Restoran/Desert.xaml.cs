@@ -40,6 +40,7 @@ namespace FutureHotel.Restoran
         }
         async private void daljeG_Click_1(object sender, RoutedEventArgs e)
         {
+            
             var dialog = new MessageDialog("Uspjesno ste porucioli jelo");
             await dialog.ShowAsync();
         }
