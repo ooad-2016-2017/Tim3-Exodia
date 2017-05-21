@@ -9,8 +9,10 @@ namespace FutureHotel.Model
 {
     public class Narudzba
     {
+        private static int k = 0;
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int NarudzbaId { get; set; }
+        public static int NarudzbaId{ get; set; }
         public int idStola { get; set; }
         public Jelo predjelo_ { get; set; }
         public Jelo glavno_ { get; set; }
@@ -20,15 +22,15 @@ namespace FutureHotel.Model
 
 
 
-       /* public Narudzba(int id,int idStola,Jelo pre,Jelo glv, Jelo des)
+        public Narudzba(int idStola_,Jelo pre,Jelo glv, Jelo des,int cijena)
         {
-            this.id = id;
-
-            this.idStola = idStola;
+            NarudzbaId = k;
+            k++;
+            idStola = idStola_;
             predjelo_ = pre;
             glavno_ = glv;
             desert_ = des;
-            
-        }*/
+            UkupnaCijena = cijena;
+        }
     }
 }

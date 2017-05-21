@@ -95,11 +95,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160417074328_Migracija.cs" />
-    <Compile Include="Migrations\20160417074328_Migracija.designer.cs">
-      <DependentUpon>20160417074328_Migracija.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\RestoranDbContextModelSnapshot.cs" />
     <Compile Include="Model\Gost.cs" />
     <Compile Include="Model\Narudzba.cs" />
     <Compile Include="Model\RestoranBaza.cs" />
@@ -269,7 +264,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

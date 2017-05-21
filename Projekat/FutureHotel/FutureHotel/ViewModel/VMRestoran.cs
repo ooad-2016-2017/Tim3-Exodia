@@ -46,15 +46,16 @@ namespace FutureHotel.ViewModel
 
         }
 
-        public void UpisiUBazu(ObservableCollection<Jelo> stavke)
+        public static void UpisiUBazu(ObservableCollection<Jelo> stavke)
         {
             using (var db = new RestoranBaza())
             {
+                int l = 0;
                 //RestoraniIS.ItemsSource = db.Restorani.OrderBy(c => c.Naziv).ToList();
 
                 var contact = new Narudzba
                 {
-                    idStola = 20,
+                    idStola = l,
                     predjelo_ = stavke[0],
                     glavno_=stavke[1],
                     desert_ = stavke[2],
