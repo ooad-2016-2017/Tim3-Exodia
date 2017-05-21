@@ -26,5 +26,10 @@ namespace FutureHotel.View.Recepcija
         {
             this.InitializeComponent();
         }
+
+        private void bNastavi_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OdabirSobe));
+        }
     }
 }

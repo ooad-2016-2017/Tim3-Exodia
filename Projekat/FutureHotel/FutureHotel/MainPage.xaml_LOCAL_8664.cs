@@ -14,10 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using FutureHotel.Ljudski_resursi;
 using FutureHotel.Restoran;
-<<<<<<< HEAD
 using FutureHotel.Recepcija;
-=======
->>>>>>> 7137d257efd96a526be85a1e0b284787c4e5240d
 using FutureHotel.View.Recepcija;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409

@@ -27,6 +27,7 @@
         <TextBlock Grid.Column="0" Grid.Row="2" Text="Jedna noc:        x$" FontSize="40" VerticalAlignment="Top" Margin="5,0,0,0"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="3" Text="Broj nocenja:     y" FontSize="40" VerticalAlignment="Top" Margin="5,0,0,0"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="4" Text="Ukupno:           x*y$" FontSize="40" VerticalAlignment="Top" Margin="5,0,0,0"></TextBlock>
-        <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Nastavi" FontSize="40" Margin="0,0,20,0"></Button>
+        <Button Name="bNastavi" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Nastavi" FontSize="40" Margin="0,0,20,0"
+                Click="bNastavi_Click"></Button>
     </Grid>
 </Page>

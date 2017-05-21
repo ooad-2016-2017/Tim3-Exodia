@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace FutureHotel.Model
 {
-    class Zaposlenik
+    public class Zaposlenik
     {
         public String ime;
         public String prezime;

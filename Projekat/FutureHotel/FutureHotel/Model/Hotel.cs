@@ -8,69 +8,17 @@ namespace FutureHotel.Model
 {
     public class Hotel
     {
-        /*private Restoran restoran;
-        private List<Zaposlenik> zaposleni;
-        private List<Soba> sobe;
-        private List<Gost> gosti;
+        public RestoranModel restoran { get; set; }
+        public List<Zaposlenik> zaposleni { get; set; }
+        public List<Soba> sobe { get; set; }
+        public List<Gost> gosti { get; set; }
 
-        public Restoran Restoran
+        public Hotel(RestoranModel _restoran, List<Zaposlenik> _zaposleni, List<Soba> _sobe, List<Gost> _gosti)
         {
-            get
-            {
-                return restoran;
-            }
-
-            set
-            {
-                restoran = value;
-            }
+            this.restoran = _restoran;
+            this.zaposleni = _zaposleni;
+            this.sobe = _sobe;
+            this.gosti = _gosti;
         }
-
-        public List<Zaposlenik> Zaposleni
-        {
-            get
-            {
-                return zaposleni;
-            }
-
-            set
-            {
-                zaposleni = value;
-            }
-        }
-
-        public List<Soba> Sobe
-        {
-            get
-            {
-                return sobe;
-            }
-
-            set
-            {
-                sobe = value;
-            }
-        }
-
-        public List<Gost> Gosti
-        {
-            get
-            {
-                return gosti;
-            }
-
-            set
-            {
-                gosti = value;
-            }
-        }
-
-        public Hotel(Restoran restoran, List<Zaposlenik> zaposleni, List<Soba> sobe, List<Gost> gosti)
-        {
-            this.Restoran = restoran;
-            this.Zaposleni = zaposleni;
-            this.Sobe = sobe;
-            this.Gosti = gosti;
-        }*/
     }
 }
