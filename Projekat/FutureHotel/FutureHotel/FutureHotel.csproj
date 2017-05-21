@@ -95,7 +95,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160417074328_Migracija.cs" />
+    <Compile Include="Migrations\20160417074328_Migracija.designer.cs">
+      <DependentUpon>20160417074328_Migracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\RestoranDbContextModelSnapshot.cs" />
     <Compile Include="Model\Gost.cs" />
+    <Compile Include="Model\RestoranBaza.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\VMHotelRezervacija.cs" />
     <Compile Include="ViewModel\VMLjudskiResursiProfil.cs" />
