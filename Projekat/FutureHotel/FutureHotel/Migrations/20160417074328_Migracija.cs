@@ -13,22 +13,16 @@ namespace OoadProjekatBazaMigrations
                 name: "Narudzba",
                 columns: table => new
                 {
-                    id = table.Column(type: "INTEGER", nullable: false),
+                    NarudzbaId = table.Column(type: "INTEGER", nullable: false),
                     idStola = table.Column(type: "INTEGER", nullable: false),
                     UkupnaCijena = table.Column(type: "INTEGER", nullable: false),
-                    // .Annotation("Sqlite:Autoincrement", true),
-                    // GeoDuzina = table.Column(type: "REAL", nullable: false),
-                    // GeoSirina = table.Column(type: "REAL", nullable: false),
                     predjelo_ = table.Column(type: "TEXT", nullable: true),
                     glavno_ = table.Column(type: "TEXT", nullable: true),
-                    //  Rating = table.Column(type: "REAL", nullable: false),
-                    //Slika = table.Column(type: "image", nullable: true),
                     desert_ = table.Column(type: "TEXT", nullable: true),
-                   // fourSqaureId = table.Column(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Restoran", x => x.id);
+                    table.PrimaryKey("PK_Restoran", x => x.NarudzbaId);
                 });
         }
 
