@@ -1,30 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace FutureHotel.ViewModel
 {
-    internal class RelayCommand<T> : ICommand
+    //Standardna relaycommand klasa koja se reuse u MVVM
+    public class RelayCommand<T> : ICommand
     {
-        private object dOpdajJelo;
-        private Action<object> _executeMethod;
-        private Func<object, bool> _canExecuteMethod;
+        private readonly Func<T, bool> _canExecuteMethod;
+        private readonly Action<T> _executeMethod;
 
-        public RelayCommand(Action<Object> executeMethod)
+        #region Constructors
+
+        public RelayCommand(Action<T> executeMethod)
             : this(executeMethod, null)
         {
         }
 
-        public RelayCommand(object dOpdajJelo)
+        public RelayCommand(Action<T> executeMethod, Func<T, bool> canExecuteMethod)
         {
-            this.dOpdajJelo = dOpdajJelo;
+            _executeMethod = executeMethod;
+            _canExecuteMethod = canExecuteMethod;
         }
 
-        public RelayCommand(Action<object> dodajJelo, Func<object, bool> moze)
-        {
-            this._executeMethod = dodajJelo;
-            this._canExecuteMethod = moze;
-        }
-        //#endregion Constructors
+        #endregion Constructors
 
         #region ICommand Members
 
@@ -38,10 +40,15 @@ namespace FutureHotel.ViewModel
             }
             catch { return false; }
         }
+
         void ICommand.Execute(object parameter)
         {
             Execute((T)parameter);
         }
+
+        #endregion ICommand Members
+
+        #region Public Methods
 
         public bool CanExecute(T parameter)
         {

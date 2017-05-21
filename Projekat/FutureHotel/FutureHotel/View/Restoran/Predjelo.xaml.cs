@@ -31,20 +31,7 @@ namespace FutureHotel.Restoran
             DataContext = new VMRestoran();
             //this.nesto.SomethingHappened += funkc;
         }
-        /*
-
-        public void funkc(object sender, EventArgs e)
-        {
-            this.Frame.Navigate(typeof(Glavno_jelo));
-        }*/
-        public void daljeG_Click()
-        {
-            this.Frame.Navigate(typeof(Glavno_jelo));
-        }
-
-        private void daljeG_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Glavno_jelo));
-        }
+        
+        
     }
 }

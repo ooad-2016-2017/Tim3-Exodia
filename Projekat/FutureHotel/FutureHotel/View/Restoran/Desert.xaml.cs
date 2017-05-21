@@ -33,7 +33,7 @@ namespace FutureHotel.Restoran
         }
 
 
-        async public void funkc(object sender, EventArgs e)
+     /*   async public void funkc(object sender, EventArgs e)
         {
             var dialog = new MessageDialog("Uspjesno ste porucioli jelo");
             await dialog.ShowAsync();
@@ -43,6 +43,6 @@ namespace FutureHotel.Restoran
             
             var dialog = new MessageDialog("Uspjesno ste porucioli jelo");
             await dialog.ShowAsync();
-        }
+        }*/
     }
 }

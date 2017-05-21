@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,11 +26,7 @@ namespace FutureHotel.View.Recepcija
         public OdabirSobe()
         {
             this.InitializeComponent();
-        }
-
-        private void bNastavi_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(RecepcijaUzimanjeGlasa));
+            DataContext = new VMHotelRezervacija();
         }
     }
 }

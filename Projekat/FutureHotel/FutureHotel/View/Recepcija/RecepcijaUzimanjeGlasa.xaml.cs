@@ -1,10 +1,12 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,5 +28,12 @@ namespace FutureHotel.View.Recepcija
         {
             this.InitializeComponent();
         }
+        async protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (VMRezervacija)e.Parameter;
+        }
     }
+
+    
+
 }

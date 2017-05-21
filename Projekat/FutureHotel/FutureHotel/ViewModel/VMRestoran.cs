@@ -7,6 +7,9 @@ using FutureHotel.Model;
 using FutureHotel.Restoran;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;
+using Windows.UI.Popups;
 
 namespace FutureHotel.ViewModel
 {
@@ -22,6 +25,8 @@ namespace FutureHotel.ViewModel
         public RestoranModel restoran { get; set; }
 
         public ICommand dodaj_jelo { get; set; }
+        public ICommand dodaj_jelo0 { get; set; }
+        public ICommand dodaj_jelo1 { get; set; }
 
         public VMRestoran()
         {
@@ -38,12 +43,42 @@ namespace FutureHotel.ViewModel
             sva_jela.Add(corba);
             jelo_odabrano = new Jelo(sva_jela[0]);
             restoran = new RestoranModel(sastojci, sva_jela);
-            dodaj_jelo = new RelayCommand<Object>(DodajJelo,moze);
+            dodaj_jelo = new RelayCommand<Object>(PosaljiNarudzbu, moze);
+            dodaj_jelo1 = new RelayCommand<Object>(DodajPredjelo, moze);
+            dodaj_jelo0 = new RelayCommand<Object>(DodajJelo, moze);
         }
+
+        async  void PosaljiNarudzbu(object param)
+        {
+            this.narucene_stavke = (ObservableCollection<Jelo>)param;
+            narucene_stavke.Add(jelo_odabrano);
+            jelo_odabrano = null;
+            String novi = "Jela koja ste poručili: \n";
+            for(int i=0;i<narucene_stavke.Count;i++)
+            {
+                novi += narucene_stavke[i] + "\n";
+            }
+            var dialog = new MessageDialog(novi);
+            await dialog.ShowAsync();
+        }
+        public void DodajPredjelo(object param)
+        {
+            var frame = (Frame)Window.Current.Content;
+            narucene_stavke.Add(jelo_odabrano);
+            jelo_odabrano = null;
+            frame.Navigate(typeof(Glavno_jelo), narucene_stavke);
+        }
+
 
         public void DodajJelo(object param)
         {
-            narucene_stavke.Add(jelo_odabrano);
+            this.narucene_stavke = (ObservableCollection<Jelo>)param;
+            
+                var frame = (Frame)Window.Current.Content;
+                narucene_stavke.Add(jelo_odabrano);
+                jelo_odabrano = null;
+                frame.Navigate(typeof(Desert), narucene_stavke);
+            
         }
         public bool moze(object pram)
         {

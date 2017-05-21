@@ -99,6 +99,7 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\VMHotelRezervacija.cs" />
     <Compile Include="ViewModel\VMRestoran.cs" />
+    <Compile Include="ViewModel\VMRezervacija.cs" />
     <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
       <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
     </Compile>
@@ -163,6 +164,7 @@
     <Compile Include="View\Vrata\VrataSnimanjeGlasa.xaml.cs">
       <DependentUpon>VrataSnimanjeGlasa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Current.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

@@ -53,11 +53,11 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Izaberite predjelo: " FontSize="40" VerticalAlignment="Bottom"></TextBlock>
-        <Button Click="daljeG_Click_1" Name="daljeG" Content="Dalje" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Command="{Binding Path=dodaj_jelo1}" Name="daljeG" Content="Dalje" Grid.Row="7" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
 
         <ListView x:Name="RestoraniListView" ItemTemplate="{StaticResource KomponentaListTemplate}" Margin="5" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding restoran.predjela}"
                   Grid.RowSpan="5" Grid.ColumnSpan="2"
-                  SelectedValue="{Binding Path=narucene_stavke, Mode=TwoWay}">
+                  SelectedValue="{Binding Path=jelo_odabrano, Mode=TwoWay}">
             <ListView.Template>
                 <!--Rucno mjenjanje liste kako bi se dodali naslovi (headers) kolona
                 Na ovaj nacin se rucno mogu dodati neke kontrole u listu za specijalne liste.-->
