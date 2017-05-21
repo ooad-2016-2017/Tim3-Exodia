@@ -13,6 +13,13 @@ namespace FutureHotel.Model
         public string tip { get; set; }
         public double cijelna { get; set; }
 
+        public Jelo(Jelo k)
+        {
+            this.naziv = k.naziv;
+            this.sastojci = k.sastojci;
+            this.tip = k.tip;
+            this.cijelna = k.cijelna;
+        }
         public Jelo(string naziv, Dictionary<string, int> sastojcim, String tip_,double cijena)
         {
             this.Naziv = naziv;
