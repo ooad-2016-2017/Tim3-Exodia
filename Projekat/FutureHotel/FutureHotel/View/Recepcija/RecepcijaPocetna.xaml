@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Restoran="using:FutureHotel.Restoran"
-    x:Class="FutureHotel.RecepcijaPocetna"
+    x:Class="FutureHotel.View.Recepcija.RecepcijaPocetna"
     mc:Ignorable="d">
 
     <Grid xmlns:src="using:FutureHotel.Recepcija" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
