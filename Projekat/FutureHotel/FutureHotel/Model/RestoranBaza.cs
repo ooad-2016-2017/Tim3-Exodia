@@ -26,11 +26,11 @@ namespace FutureHotel.Model
             optionsBuilder.UseSqlite($"Data source={databaseFilePath}");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+       /* protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             //jedno od polja je image da se zna šta je zapravo predstavlja byte[]
            // modelBuilder.Entity<Narudzba>().Property(p => p.Slika).HasColumnType("image");
-        }
+        }*/
     }
 }

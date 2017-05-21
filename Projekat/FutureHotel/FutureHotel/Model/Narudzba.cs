@@ -10,7 +10,7 @@ namespace FutureHotel.Model
     public class Narudzba
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int NarudzbaId { get; set; }
         public int idStola { get; set; }
         public Jelo predjelo_ { get; set; }
         public Jelo glavno_ { get; set; }
