@@ -58,7 +58,6 @@ namespace FutureHotel.ViewModel
             Jelo corba = new Jelo("corba", sastojci, "Glavno", 8);
             sva_jela.Add(kolac);
             sva_jela.Add(corba);
-            jelo_odabrano = new Jelo(sva_jela[0]);
             restoran = new RestoranModel(sastojci, sva_jela);
             dodaj_jelo = new RelayCommand<Object>(PosaljiNarudzbu, moze);
             dodaj_jelo1 = new RelayCommand<Object>(DodajPredjelo, moze);
