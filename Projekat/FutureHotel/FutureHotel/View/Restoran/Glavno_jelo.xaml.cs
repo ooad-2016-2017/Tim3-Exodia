@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,11 +26,17 @@ namespace FutureHotel.Restoran
         public Glavno_jelo()
         {
             this.InitializeComponent();
-            this.UK.SomethingHappened += funkc;
+
+            DataContext = new VMRestoran();
+            //this.UK.SomethingHappened += funkc;
         }
 
 
         public void funkc(object sender, EventArgs e)
+        {
+            this.Frame.Navigate(typeof(Desert));
+        }
+        private void daljeG_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Desert));
         }

@@ -10,14 +10,14 @@ namespace FutureHotel.Model
     {
         public string naziv { get; set; }
         private Dictionary<string, int> sastojci;
-        public string tip;
+        public string tip { get; set; }
         public double cijelna { get; set; }
 
-        public Jelo(string naziv, Dictionary<string, int> sastojcim, String tip,double cijena)
+        public Jelo(string naziv, Dictionary<string, int> sastojcim, String tip_,double cijena)
         {
             this.Naziv = naziv;
             this.Sastojci = sastojci;
-            this.tip = tip;
+            this.tip = tip_;
             this.cijelna = cijena;
         }
 

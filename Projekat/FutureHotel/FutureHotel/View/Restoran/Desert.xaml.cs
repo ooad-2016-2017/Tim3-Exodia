@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,11 +27,18 @@ namespace FutureHotel.Restoran
         public Desert()
         {
             this.InitializeComponent();
-            this.UK.SomethingHappened += funkc;
+
+            DataContext = new VMRestoran();
+            //this.UK.SomethingHappened += funkc;
         }
 
 
         async public void funkc(object sender, EventArgs e)
+        {
+            var dialog = new MessageDialog("Uspjesno ste porucioli jelo");
+            await dialog.ShowAsync();
+        }
+        async private void daljeG_Click_1(object sender, RoutedEventArgs e)
         {
             var dialog = new MessageDialog("Uspjesno ste porucioli jelo");
             await dialog.ShowAsync();
