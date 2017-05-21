@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Gost.cs" />
     <Compile Include="ViewModel\VMRestoran.cs" />
     <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
       <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
