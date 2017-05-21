@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FutureHotel.Model
 {
-    class Gost
+    public class Gost
     {
         public int id { get; set; }
         public List<Stream> glasovi { get; set; }
