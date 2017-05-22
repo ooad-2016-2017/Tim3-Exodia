@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace FutureHotel.Model
 {
     public class Jelo
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int jeloId { get; set; }
         public string naziv { get; set; }
         private Dictionary<string, int> sastojci;
         public string tip { get; set; }
@@ -22,24 +25,13 @@ namespace FutureHotel.Model
         }
         public Jelo(string naziv, Dictionary<string, int> sastojcim, String tip_,double cijena)
         {
-            this.Naziv = naziv;
+            this.naziv = naziv;
             this.Sastojci = sastojci;
             this.tip = tip_;
             this.cijelna = cijena;
         }
 
-        public string Naziv
-        {
-            get
-            {
-                return naziv;
-            }
-
-            set
-            {
-                naziv = value;
-            }
-        }
+        
 
         public Dictionary<string, int> Sastojci
         {

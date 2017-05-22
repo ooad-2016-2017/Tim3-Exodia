@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.Entity;
 
 namespace FutureHotel
 {
@@ -30,6 +33,10 @@ namespace FutureHotel
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            using (var db = new RestoranBaza())
+            {
+                db.Database.ApplyMigrations();
+            }
         }
 
         /// <summary>

@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Popups;
+using Microsoft.Data.Entity;
 
 namespace FutureHotel.ViewModel
 {
@@ -48,6 +49,7 @@ namespace FutureHotel.ViewModel
 
         public static void UpisiUBazu(ObservableCollection<Jelo> stavke)
         {
+            
             using (var db = new RestoranBaza())
             {
                 int l = 0;
@@ -55,7 +57,8 @@ namespace FutureHotel.ViewModel
 
                 var contact = new Narudzba
                 {
-                    idStola = l,
+
+                    idStola = 20,
                     predjelo_ = stavke[0],
                     glavno_=stavke[1],
                     desert_ = stavke[2],
