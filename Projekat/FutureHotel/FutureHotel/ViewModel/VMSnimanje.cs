@@ -1,4 +1,5 @@
-﻿using CognitiveAPIWrapper.Audio;
+﻿
+using CognitiveAPIWrapper.Audio;
 using CognitiveAPIWrapper.SpeakerIdentification;
 using System;
 using System.Collections.Generic;

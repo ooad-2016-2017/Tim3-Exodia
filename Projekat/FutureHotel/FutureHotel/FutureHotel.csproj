@@ -273,7 +273,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Hamza\Desktop\CognitiveSpeechWrapper-master\CognitiveAPIWrapper\CognitiveAPIWrapper.csproj">
+    <ProjectReference Include="..\..\..\CognitiveSpeechWrapper-master\CognitiveAPIWrapper\CognitiveAPIWrapper.csproj">
       <Project>{F63B4571-88E2-40AE-AA9B-958D39561943}</Project>
       <Name>CognitiveAPIWrapper</Name>
     </ProjectReference>
