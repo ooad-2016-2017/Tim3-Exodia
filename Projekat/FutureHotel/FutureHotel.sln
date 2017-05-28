@@ -1,20 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureHotel", "FutureHotel\FutureHotel.csproj", "{05634073-9FE5-417B-8EDB-E2E2D2813863}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognitiveAPIWrapper", "C:\Users\Hamza\Desktop\CognitiveSpeechWrapper-master\CognitiveAPIWrapper\CognitiveAPIWrapper.csproj", "{F63B4571-88E2-40AE-AA9B-958D39561943}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|ARM.ActiveCfg = Debug|ARM
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|ARM.Build.0 = Debug|ARM
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -24,6 +29,7 @@ Global
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|x86.ActiveCfg = Debug|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|x86.Build.0 = Debug|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Debug|x86.Deploy.0 = Debug|x86
+		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|Any CPU.ActiveCfg = Release|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|ARM.ActiveCfg = Release|ARM
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|ARM.Build.0 = Release|ARM
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|ARM.Deploy.0 = Release|ARM
@@ -33,6 +39,22 @@ Global
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|x86.ActiveCfg = Release|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|x86.Build.0 = Release|x86
 		{05634073-9FE5-417B-8EDB-E2E2D2813863}.Release|x86.Deploy.0 = Release|x86
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|ARM.Build.0 = Debug|ARM
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|x64.ActiveCfg = Debug|x64
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|x64.Build.0 = Debug|x64
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|x86.ActiveCfg = Debug|x86
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Debug|x86.Build.0 = Debug|x86
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|ARM.ActiveCfg = Release|ARM
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|ARM.Build.0 = Release|ARM
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|x64.ActiveCfg = Release|x64
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|x64.Build.0 = Release|x64
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|x86.ActiveCfg = Release|x86
+		{F63B4571-88E2-40AE-AA9B-958D39561943}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

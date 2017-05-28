@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutureHotel.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace FutureHotel.View.Vrata
         public VrataSnimanjeGlasa()
         {
             this.InitializeComponent();
+            DataContext = new VMSnimanje();
         }
     }
 }

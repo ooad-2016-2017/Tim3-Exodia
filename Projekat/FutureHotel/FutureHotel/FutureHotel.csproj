@@ -110,6 +110,7 @@
     <Compile Include="ViewModel\VMPretragaZaposleni.cs" />
     <Compile Include="ViewModel\VMRestoran.cs" />
     <Compile Include="ViewModel\VMRezervacija.cs" />
+    <Compile Include="ViewModel\VMSnimanje.cs" />
     <Compile Include="ViewModel\VMZaposleni.cs" />
     <Compile Include="View\Ljudski resursi\LjudskiResursiUpisZaposlenika.xaml.cs">
       <DependentUpon>LjudskiResursiUpisZaposlenika.xaml</DependentUpon>
@@ -271,7 +272,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Hamza\Desktop\CognitiveSpeechWrapper-master\CognitiveAPIWrapper\CognitiveAPIWrapper.csproj">
+      <Project>{F63B4571-88E2-40AE-AA9B-958D39561943}</Project>
+      <Name>CognitiveAPIWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

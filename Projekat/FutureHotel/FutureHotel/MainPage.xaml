@@ -15,6 +15,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -30,5 +31,7 @@ HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" SizeChanged
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"  Click="ButtonRestoranClick"></Button>
         <Button Name="ButtonLjudskiResursi" Content="Ljudski resursi" Grid.Row="3" Grid.Column="1" Background="#FFffcecf" Foreground="#FF262625"
 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonLjudskiResursiClick"></Button>
+        <Button Name="ButtonVrata" Content="Vrata" Grid.Row="4" Grid.Column="1" Background="#FFffcecf" Foreground="#FF262625"
+HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="ButtonVrata_Click"></Button>
     </Grid> 
 </Page>

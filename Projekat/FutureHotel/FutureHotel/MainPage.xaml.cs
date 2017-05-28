@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using FutureHotel.Ljudski_resursi;
 using FutureHotel.Restoran;
 using FutureHotel.View.Recepcija;
+using FutureHotel.View.Vrata;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -58,6 +59,11 @@ namespace FutureHotel
         private void ButtonHotelClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RecepcijaPocetna));
+        }
+
+        private void ButtonVrata_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(VrataSnimanjeGlasa));
         }
     }
 }
