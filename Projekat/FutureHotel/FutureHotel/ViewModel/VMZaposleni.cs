@@ -13,6 +13,7 @@ using Windows.UI.Popups;
 using Windows.Media.Audio;
 //=======
 using Windows.UI.Xaml.Controls;
+using Microsoft.WindowsAzure.MobileServices;
 //>>>>>>> a9eb7bb8982431c94774fbc0f6c997c345713dc0
 
 namespace FutureHotel.ViewModel
@@ -27,6 +28,8 @@ namespace FutureHotel.ViewModel
         public ICommand kSlika { get; set; }
         public ICommand komanda { get; set; }
         public bool validirano { get; set; }
+
+        IMobileServiceTable<Zaposlenik> userTableObj = App.MobileService.GetTable<Zaposlenik>();
 
         public VMZaposleni()
         {
@@ -64,14 +67,32 @@ namespace FutureHotel.ViewModel
             return true;
         }
 
-        public async void dodajZaposlenog(object param)
+        public void dodajZaposlenog(object param)
         {
             validiraj();
             if (validirano)
             {
                 //rad sa bazom
-                var dialog = new MessageDialog("Zaposleni uspjesno dodan!");
-                await dialog.ShowAsync();
+
+                try
+                {
+                    Zaposlenik obj = new Zaposlenik();
+                    obj.ime = ime;
+                    obj.prezime = prezime;
+                    obj.dat_rodjenja = datum;
+                    obj.plata = Double.Parse(plata);
+                    obj.slika = slika;
+
+                    userTableObj.InsertAsync(obj);
+                    MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog zaposlenog.");
+                     msgDialog.ShowAsync();
+                }
+                catch (Exception ex)
+                {
+                    MessageDialog msgDialogError = new MessageDialog("Error : " +
+                   ex.ToString());
+                    msgDialogError.ShowAsync();
+                }
             }
         }
 
@@ -86,7 +107,7 @@ namespace FutureHotel.ViewModel
             StorageFile file = await openPicker.PickSingleFileAsync();
             if (file != null)
             {
-                slika = file.Path;
+                slika = "Assets/logo.png";
             }
         }
     }

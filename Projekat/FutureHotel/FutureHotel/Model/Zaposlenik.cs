@@ -9,10 +9,10 @@ namespace FutureHotel.Model
 {
     public class Zaposlenik
     {
+        public int id { get; set; }
         public String ime { get; set; }
         public String prezime { get; set; }
         public DateTime dat_rodjenja { get; set; }
-        public int id { get; set; }
         public String slika { get; set; }
         public double plata { get; set; }
 

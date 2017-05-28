@@ -79,7 +79,5 @@ namespace FutureHotel.ViewModel
             MessageDialog dialog = new MessageDialog(text);
             await dialog.ShowAsync();
         }
-
-
     }
 }

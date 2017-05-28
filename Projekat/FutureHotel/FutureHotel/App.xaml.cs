@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Entity;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace FutureHotel
 {
@@ -25,6 +26,7 @@ namespace FutureHotel
     /// </summary>
     sealed partial class App : Application
     {
+        public static MobileServiceClient MobileService;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,6 +39,10 @@ namespace FutureHotel
             {
                 db.Database.ApplyMigrations();
             }
+            MobileService = new MobileServiceClient("http://futurehotel.azurewebsites.net");
+            //futurehotel.database.windows.net
+            //MobileService = new MobileServiceClient("futurehotel.database.windows.net");
+
         }
 
         /// <summary>
