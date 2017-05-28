@@ -54,6 +54,8 @@ namespace FutureHotel.Ljudski_resursi
                     this.ButtonUnesi1.FontSize = Math.Floor(fontsizeMultiplier * 0.5);
                     this.DatePicker.FontSize = Math.Floor(fontsizeMultiplier * 0.8);
                     this.DatePicker.Width = this.TextBoxIme.ActualWidth;
+                    this.TextBlockSlika.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.ButtonSlika.FontSize = Math.Floor(fontsizeMultiplier * 0.5);
                 }
             }
         }
