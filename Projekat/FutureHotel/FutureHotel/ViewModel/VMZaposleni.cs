@@ -6,8 +6,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI.Popups;
+<<<<<<< HEAD
 using Windows.Media.Audio;
+=======
+using Windows.UI.Xaml.Controls;
+>>>>>>> a9eb7bb8982431c94774fbc0f6c997c345713dc0
 
 namespace FutureHotel.ViewModel
 {
@@ -17,11 +23,14 @@ namespace FutureHotel.ViewModel
         public String prezime { get; set; }
         public DateTime datum { get; set; }
         public String plata { get;set; }
+        public String slika { get; set; }
+        public ICommand kSlika { get; set; }
         public ICommand komanda { get; set; }
         public bool validirano { get; set; }
 
         public VMZaposleni()
         {
+            kSlika = new RelayCommand<object>(dodajSliku, moze);
             komanda = new RelayCommand<object>(dodajZaposlenog, moze);
         }
 
@@ -63,6 +72,21 @@ namespace FutureHotel.ViewModel
                 //rad sa bazom
                 var dialog = new MessageDialog("Zaposleni uspjesno dodan!");
                 await dialog.ShowAsync();
+            }
+        }
+
+        public async void dodajSliku(object param)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".jpg");
+            openPicker.FileTypeFilter.Add(".jpeg");
+            openPicker.FileTypeFilter.Add(".png");
+
+            StorageFile file = await openPicker.PickSingleFileAsync();
+            if (file != null)
+            {
+                slika = file.Path;
             }
         }
     }

@@ -13,10 +13,10 @@ namespace FutureHotel.Model
         public String prezime { get; set; }
         public DateTime dat_rodjenja { get; set; }
         public int id { get; set; }
-        public Image slika { get; set; }
+        public String slika { get; set; }
         public double plata { get; set; }
 
-        public Zaposlenik(String ime_, String prezime_, DateTime dat, int id_, Image slika_, double plata_) {
+        public Zaposlenik(String ime_, String prezime_, DateTime dat, int id_, String slika_, double plata_) {
             ime = ime_;
             prezime = prezime_;
             dat_rodjenja = dat; 
