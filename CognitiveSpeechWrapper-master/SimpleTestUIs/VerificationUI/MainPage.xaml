@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="VerificationUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VerificationUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- Note - this isn't really a UI, it's just a test harness -->
+        <StackPanel
+            Width="284"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <StackPanel.Resources>
+                <Style
+                    TargetType="Button">
+                    <Setter
+                        Property="Margin"
+                        Value="4" />
+                    <Setter
+                        Property="HorizontalAlignment"
+                        Value="Stretch" />
+                </Style>
+                <Style
+                    TargetType="TextBlock">
+                    <Setter
+                        Property="Margin"
+                        Value="4" />
+                    <Setter
+                        Property="HorizontalAlignment"
+                        Value="Stretch" />
+                </Style>
+            </StackPanel.Resources>
+            <Button
+                Content="Pick Random Phrase"
+                Click="OnGetRandomPhraseAsync" />
+            <TextBlock
+                x:Name="txtPhrase" />
+            <Button
+                Content="Enroll"
+                Click="OnEnrollAsync" />
+            <TextBlock
+                x:Name="txtProfileId" />
+            <Button
+                Content="Verify"
+                Click="OnVerifyAsync"/>
+            <Button
+                Content="Clear All Profiles"
+                Click="OnClearAllAsync" />
+        </StackPanel>
+    </Grid>
+</Page>

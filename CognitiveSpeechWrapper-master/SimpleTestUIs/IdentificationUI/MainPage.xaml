@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="IdentificationUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IdentificationUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- this is not really a UI, more of a test harness-->
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="284">
+            <StackPanel.Resources>
+                <Style
+                    TargetType="Button">
+                    <Setter
+                        Property="Margin"
+                        Value="4" />
+                    <Setter
+                        Property="HorizontalAlignment"
+                        Value="Stretch" />
+                </Style>
+                <Style
+                    TargetType="TextBlock">
+                    <Setter
+                        Property="Margin"
+                        Value="4" />
+                    <Setter
+                        Property="HorizontalAlignment"
+                        Value="Stretch" />
+                </Style>
+            </StackPanel.Resources>
+            <Button
+                Content="Enrol"
+                Click="OnEnrolAsync" />
+            <Button
+                Content="Identify"
+                Click="OnIdentifyAsync" />
+            <Button
+                Content="Clear All Profiles"
+                Click="OnClearAllProfilesAsync" />
+        </StackPanel>
+    </Grid>
+</Page>

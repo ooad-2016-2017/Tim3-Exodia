@@ -9,11 +9,11 @@ using System.Windows.Input;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Popups;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 using Windows.Media.Audio;
-=======
+//=======
 using Windows.UI.Xaml.Controls;
->>>>>>> a9eb7bb8982431c94774fbc0f6c997c345713dc0
+//>>>>>>> a9eb7bb8982431c94774fbc0f6c997c345713dc0
 
 namespace FutureHotel.ViewModel
 {

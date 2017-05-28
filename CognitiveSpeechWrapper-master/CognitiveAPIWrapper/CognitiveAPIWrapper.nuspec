@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>mtCognitiveAPIWrapper</id>
+    <version>1.0</version>
+    <title>API Wrapper for Cognitive Speaker Identification and Verification</title>
+    <authors>Mike Taulty</authors>
+    <owners>Mike Taulty</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>API Wrapper for Cognitive Speaker Identification and Verification</description>
+    <releaseNotes>One and only version</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+<references>
+<reference file="CognitiveAPIWrapper.dll"/>
+</references>
+  </metadata>
+<files>
+<file src="properties\CognitiveAPIWrapper.rd.xml" target="lib/NetCore50/CognitiveAPIWrapper/properties"/>
+<file src="bin\debug\CognitiveAPIWrapper.pri" target="lib/NetCore50"/>
+</files>
+</package>
