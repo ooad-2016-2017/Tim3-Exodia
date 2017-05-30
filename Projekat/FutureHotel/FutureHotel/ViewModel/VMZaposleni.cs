@@ -86,6 +86,7 @@ namespace FutureHotel.ViewModel
                     userTableObj.InsertAsync(obj);
                     MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog zaposlenog.");
                      msgDialog.ShowAsync();
+
                 }
                 catch (Exception ex)
                 {
