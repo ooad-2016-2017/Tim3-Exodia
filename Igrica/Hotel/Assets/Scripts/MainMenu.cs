@@ -10,7 +10,8 @@ public class MainMenu : MonoBehaviour {
 
     private void Start()
     {
-        scoreText.text = PlayerPrefs.GetInt("score").ToString();
+        scoreText.text = "High Score:\n";
+        scoreText.text += PlayerPrefs.GetInt("score").ToString();
     }
 	
 	public void ToGame()

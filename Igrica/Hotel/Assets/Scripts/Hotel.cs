@@ -11,15 +11,15 @@ public class Hotel : MonoBehaviour {
     public Text scoreText;
     private const float BOUNDS_SIZE = 2.5f;
     private const float POMJERANJE = 5.0f;
-    private const float GRESKA = 0.1f;
+    private const float GRESKA = 0.05f;
     private const float VELICINA = 1f;
     private int combo = 0;
-    public GameObject endPanel;
+    public GameObject gameOverPanel;
 
     private int index;
     private int score = 0;
     private float pomjeranje = 0.0f;
-    private float brzina = 2.5f;
+    private float brzina = 1.0f;
     private bool desno = true;
     private bool gameOver = false;
 
@@ -39,6 +39,9 @@ public class Hotel : MonoBehaviour {
 	}
 	
 	void Update () {
+        if (gameOver)
+            return;
+
         if (Input.GetMouseButtonDown(0)) {
             if(PostaviSprat())
             {
@@ -60,8 +63,6 @@ public class Hotel : MonoBehaviour {
 
     private void PomjeriSprat()
     {
-        if (gameOver)
-            return;
         pomjeranje += Time.deltaTime * brzina;
         if(desno) 
             hotel[index].transform.localPosition = new Vector3(Mathf.Sin(pomjeranje) * BOUNDS_SIZE, score, pocetnaPozicija);
@@ -118,14 +119,20 @@ public class Hotel : MonoBehaviour {
         else
             pocetnaPozicija = t.localPosition.z;
         desno = !desno;
+        brzina += 0.1f;
+        if (brzina > 1.5 && brzina < 1.7)
+            brzina += 1;
+        if (brzina > 4.9 && brzina < 5.1)
+            brzina += 3;
         return true;
     }
 
     private void Kraj()
     {
-        Debug.Log("NEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+        if (PlayerPrefs.GetInt("score") < score)
+            PlayerPrefs.SetInt("score", score);
         gameOver = true;
-        endPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
         hotel[index].AddComponent<Rigidbody>();
     }
 
