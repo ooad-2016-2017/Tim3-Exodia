@@ -2,22 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Hotel : MonoBehaviour {
     
     private GameObject[] hotel;
-
+    public Text scoreText;
     private const float BOUNDS_SIZE = 2.5f;
     private const float POMJERANJE = 5.0f;
     private const float GRESKA = 0.1f;
     private const float VELICINA = 1f;
     private int combo = 0;
+    public GameObject endPanel;
 
     private int index;
     private int score = 0;
     private float pomjeranje = 0.0f;
     private float brzina = 2.5f;
     private bool desno = true;
+    private bool gameOver = false;
 
     private float pocetnaPozicija;
 
@@ -40,6 +44,7 @@ public class Hotel : MonoBehaviour {
             {
                 NapraviSprat();
                 score++;
+                scoreText.text = score.ToString();
             }
             else
             {
@@ -55,6 +60,8 @@ public class Hotel : MonoBehaviour {
 
     private void PomjeriSprat()
     {
+        if (gameOver)
+            return;
         pomjeranje += Time.deltaTime * brzina;
         if(desno) 
             hotel[index].transform.localPosition = new Vector3(Mathf.Sin(pomjeranje) * BOUNDS_SIZE, score, pocetnaPozicija);
@@ -116,7 +123,15 @@ public class Hotel : MonoBehaviour {
 
     private void Kraj()
     {
+        Debug.Log("NEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+        gameOver = true;
+        endPanel.SetActive(true);
+        hotel[index].AddComponent<Rigidbody>();
+    }
 
+    public void OnButtonClick(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
 
