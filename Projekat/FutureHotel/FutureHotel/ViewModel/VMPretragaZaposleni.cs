@@ -1,5 +1,6 @@
 ﻿using FutureHotel.Ljudski_resursi;
 using FutureHotel.Model;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,37 +21,50 @@ namespace FutureHotel.ViewModel
         public List<Zaposlenik> zap { get; set; }
         public List<Soba> s { get; set; }
         public ObservableCollection<Zaposlenik> zaposleni { get; set; }
-        public String rijec { get; set; }
+        //IEnumerable<Zaposlenik> zaposleni { get; set; }
+    public String rijec { get; set; }
         public object selektovani { get; set; }
         public ICommand komanda { get; set; }
         public ICommand komandaPregled { get; set; }
 
+        IMobileServiceTable<Zaposlenik> userTableObj = App.MobileService.GetTable<Zaposlenik>();
+
 
         public VMPretragaZaposleni()
         {
-            zaposleni = new ObservableCollection<Zaposlenik>();
             rijec = "";
-            ucitaj();
+            //ucitaj_();
+            zaposleni = new ObservableCollection<Zaposlenik>();
+            //zaposleni.Add(new Zaposlenik("mujo", "hah", new DateTime(1, 1, 1), "id def", 100));
             komanda = new RelayCommand<object>(pretraga, moze);
             komandaPregled = new RelayCommand<object>(pregled, moze);
             hotel = new Hotel(zap, s, null);
         }
 
-        public void ucitaj()
+        /*public async void ucitaj_()
         {
-            zap = new List<Zaposlenik>();
-            zap.Add(new Zaposlenik("Meho", "Aljo", new DateTime(1, 1, 1), 1, 120));
-        }
+            IEnumerable<Zaposlenik> zaposleni_ = await userTableObj.ReadAsync();
+            zap = new List<Zaposlenik>(zaposleni_);
+            hotel.zaposleni = new List<Zaposlenik>(zaposleni);
+        }*/
+
+        
 
         public bool moze(object param)
         {
             return true;
         }
         
-        public void pretraga(object param)
+        public async void pretraga(object param)
         {
+            IEnumerable<Zaposlenik> zaposleni_ = await userTableObj.ReadAsync();
+            zap = new List<Zaposlenik>(zaposleni_);
+            hotel.zaposleni = new List<Zaposlenik>(zaposleni);
+            hotel = new Hotel(zap, s, null);
+
             zaposleni.Clear();
-            for(int i=0; i<hotel.zaposleni.Count; i++)
+            if(hotel.zaposleni!=null)
+            for (int i=0; i<hotel.zaposleni.Count; i++)
             {
                 if(hotel.zaposleni[i].ToString().Contains(rijec))
                 {

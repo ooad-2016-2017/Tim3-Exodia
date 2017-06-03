@@ -54,6 +54,9 @@ namespace FutureHotel.Ljudski_resursi
             DataContext = (VMLjudskiResursiProfil)e.Parameter;
         }
 
-        
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

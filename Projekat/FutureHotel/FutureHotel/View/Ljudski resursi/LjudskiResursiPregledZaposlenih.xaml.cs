@@ -46,5 +46,10 @@ namespace FutureHotel.Ljudski_resursi
         {
 
         }
+
+        private void bNazad_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

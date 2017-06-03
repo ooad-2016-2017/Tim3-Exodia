@@ -12,9 +12,11 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -26,6 +28,8 @@
                   SelectedValue="{Binding Path=selektovani, Mode=TwoWay}"
                   Margin="5,0,5,0" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></ListView>
         <Button  Background="#FFffcecf" Foreground="#FF262625" Name="bPretraga" Margin="5,0,5,0" Command="{Binding Path=komanda}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Pretrazi" FontSize="20"></Button>
-        <Button  Background="#FFffcecf" Foreground="#FF262625" Name="bPregled" Margin="5,0,5,0" Command="{Binding Path=komandaPregled}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Pregledaj" FontSize="20"></Button>
+        <Button  Background="#FFffcecf" Foreground="#FF262625" Name="bPregled" Margin="10,0,0,0" Command="{Binding Path=komandaPregled}" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Pregledaj" FontSize="20"></Button>
+        <Button  Background="#FFffcecf" Foreground="#FF262625" Name="bNazad" Margin="10,0,0,0" Click="bNazad_Click" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Nazad" FontSize="20"></Button>
+
     </Grid>
 </Page> 

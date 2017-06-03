@@ -12,7 +12,7 @@ namespace FutureHotel.Model
         String tipMenadzera;
 
 
-        public Menadzer(String ime_, String prezime_, DateTime dat, int id_, String slika_, double plata_, String tip) : base(ime_, prezime_, dat,  id_,  slika_,  plata_)
+        public Menadzer(String ime_, String prezime_, DateTime dat, string id_, String slika_, double plata_, String tip) : base(ime_, prezime_, dat,  id_,  slika_,  plata_)
         {
             tipMenadzera = tip;
         }

@@ -19,7 +19,6 @@ using FutureHotel.Ljudski_resursi;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml;
 using Windows.Storage.Streams;
-using FutureHotel.Ljudski_resursi;
 //>>>>>>> a9eb7bb8982431c94774fbc0f6c997c345713dc0
 
 namespace FutureHotel.ViewModel
@@ -30,7 +29,7 @@ namespace FutureHotel.ViewModel
         public String prezime { get; set; }
         public DateTime datum { get; set; }
         public String plata { get;set; }
-        public BitmapImage slika { get; set; }
+        public static string slika { get; set; }
         public ICommand kSlika { get; set; }
         public ICommand komanda { get; set; }
         public bool validirano { get; set; }
@@ -40,6 +39,7 @@ namespace FutureHotel.ViewModel
 
         public VMZaposleni()
         {
+            slika = "";
             kSlika = new RelayCommand<object>(dodajSliku, moze);
             komanda = new RelayCommand<object>(dodajZaposlenog, moze);
         }
@@ -88,7 +88,7 @@ namespace FutureHotel.ViewModel
                     obj.prezime = prezime;
                     obj.dat_rodjenja = datum;
                     obj.plata = Double.Parse(plata);
-                    obj.slika = slika.ToString();
+                    obj.slika = slika;
 
                     userTableObj.InsertAsync(obj);
                     MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog zaposlenog.");
@@ -104,9 +104,21 @@ namespace FutureHotel.ViewModel
             }
         }
 
-        public async void dodajSliku(object param)
+        public static void ubaci(string sliba)
         {
-            FileOpenPicker open = new FileOpenPicker();
+            slika = sliba;
+        }
+
+        public void dodajSliku(object param)
+        {
+            /*String stringPath = "ms-appx:///Assets/logo.png";
+            Uri imageUri = new Uri(stringPath, UriKind.Absolute);
+            BitmapImage imageBitmap = new BitmapImage(imageUri);
+            slika = imageBitmap;*/
+
+            //slika = "Assets/logo.png";
+
+            /*FileOpenPicker open = new FileOpenPicker();
             // Open a stream for the selected file 
             StorageFile file = await open.PickSingleFileAsync();
             // Ensure a file was selected 
@@ -121,7 +133,7 @@ namespace FutureHotel.ViewModel
                     await bitmapImage.SetSourceAsync(fileStream);
                     TextBoxSlika.Source = bitmapImage;
                 }
-            }
+            }*/
 
             /*
             FileOpenPicker openPicker = new FileOpenPicker();
@@ -138,14 +150,14 @@ namespace FutureHotel.ViewModel
             }*/
         }
 
-        void Image_Loaded(object sender, RoutedEventArgs e)
-        {
-            Image img = sender as Image;
+        //void Image_Loaded(object sender, RoutedEventArgs e)
+        //{
+            /*Image img = sender as Image;
             BitmapImage bitmapImage = new BitmapImage();
             img.Width = bitmapImage.DecodePixelWidth = 80; //natural px width of image source
                                                            // don't need to set Height, system maintains aspect ratio, and calculates the other
                                                            // dimension, so long as one dimension measurement is provided
-            bitmapImage.UriSource = new Uri(img.BaseUri, "ms-appx:///FutureHotel/Assets/logo.png");
-        }
+            bitmapImage.UriSource = new Uri(img.BaseUri, "ms-appx:///FutureHotel/Assets/logo.png");*/
+        //}
     }
 }
