@@ -41,12 +41,12 @@ namespace FutureHotel.ViewModel
 
             // Ask the user to begin speaking.
             await ConfirmMessageAsync(
-              $"dismiss the dialog then speak for 60 seconds");
+              $"dismiss the dialog then speak for 20 seconds");  //bilo 60 seconds  !!!!!!!!!!!!!!!!!
 
             // Wrapper class which uses AudioGraph to record audio to a file over a specified
             // period of time.
             StorageFile recordingFile = await CognitiveAudioGraphRecorder.RecordToTemporaryFileAsync(
-              TimeSpan.FromSeconds(60));
+              TimeSpan.FromSeconds(20));   //Bilo 60
 
             // Make a call to the 'Create Enrollment' API to process the speech for the
             // profile. 

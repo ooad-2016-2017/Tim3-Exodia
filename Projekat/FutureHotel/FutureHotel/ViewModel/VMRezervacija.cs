@@ -41,8 +41,8 @@ namespace FutureHotel.ViewModel
 
             // Make a call to the 'Create Profile' REST API and get back a new profile ID.
             Guid profileId = await idClient.AddIdentificationProfileAsync();
-
-            float remainingTalkTime = 60.0f;
+            
+            float remainingTalkTime = 20.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
 
             // Loop until we have fully enrolled - this check is perhaps simplistic as
             // we may get errors etc.
