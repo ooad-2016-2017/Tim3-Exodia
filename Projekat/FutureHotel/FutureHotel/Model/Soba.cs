@@ -13,8 +13,6 @@ namespace FutureHotel.Model
         public DateTime zauzetaDo { get; set; }
         public int gost { get; set; }
 
-      
-
         public Soba(int id, int brojKreveta, DateTime zauzetaDo, int gost)
         {
             this.id = id;

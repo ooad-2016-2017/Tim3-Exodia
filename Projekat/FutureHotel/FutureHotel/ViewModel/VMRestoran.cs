@@ -74,6 +74,7 @@ namespace FutureHotel.ViewModel
 
         public void ucitaj()
         {
+
             narucene_stavke = new ObservableCollection<Jelo>();
             sastojci.Add("So", 500);
             sastojci.Add("Brasno", 1000);

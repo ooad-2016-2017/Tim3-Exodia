@@ -12,7 +12,7 @@ namespace FutureHotel.Model
     {
 
         Stream glas;
-        public Zastitar(String ime_, String prezime_, DateTime dat, string id_, String slika_, double plata_, Stream tip) : base(ime_, prezime_, dat, id_, slika_, plata_)
+        public Zastitar(String ime_, String prezime_, string dat, string id_, String slika_, double plata_, Stream tip) : base(ime_, prezime_, dat, id_, slika_, plata_)
         {
             glas = tip;
         }
