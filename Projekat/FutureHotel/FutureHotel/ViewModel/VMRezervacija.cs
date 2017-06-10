@@ -1,5 +1,7 @@
 ﻿using CognitiveAPIWrapper.Audio;
 using CognitiveAPIWrapper.SpeakerIdentification;
+using FutureHotel.Model;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +17,24 @@ namespace FutureHotel.ViewModel
 {
     class VMRezervacija
     {
-        String brojNocenja;
-        String tipSobe;
+        Soba primljena;
         public ICommand Snimanje_ { get; set; }
+        IMobileServiceTable<Soba> userTableObj = App.MobileService.GetTable<Soba>();
 
 
+        /* Smatram da nam ovaj kontruktor ne treba
         public VMRezervacija(List<String> lista)
         {
-            tipSobe = lista[0];
-            brojNocenja = lista[1];
+            
+            Snimanje_ = new RelayCommand<object>(OnEnrollAsync, moze);
+            //var dialog = new MessageDialog(lista[0]);
+            //dialog.ShowAsync();
+            //potrebna komunikacija sa ekstermin uredjajem za dalje
+        }*/
+
+        public VMRezervacija(Soba nova)
+        {
+            primljena = nova;
             Snimanje_ = new RelayCommand<object>(OnEnrollAsync, moze);
             /*var dialog = new MessageDialog(lista[0]);
             dialog.ShowAsync();*/
@@ -41,6 +52,10 @@ namespace FutureHotel.ViewModel
 
             // Make a call to the 'Create Profile' REST API and get back a new profile ID.
             Guid profileId = await idClient.AddIdentificationProfileAsync();
+
+            //spasiti taj id u sobi
+            primljena.gost_guid = profileId.ToString();
+            
             
             float remainingTalkTime = 20.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
 
@@ -76,6 +91,17 @@ namespace FutureHotel.ViewModel
                 // How much more speech does the service need to hear from the user?
                 remainingTalkTime = result.ProcessingResult.RemainingEnrollmentSpeechTime;
             }
+            await upisi_sobe_u_bazu();
+            await ConfirmMessageAsync(
+                  $"Uspjesno vam je iznajmljena soba {primljena.redni_br}.");
+
+        }
+
+        public async Task upisi_sobe_u_bazu ()
+        {
+            IEnumerable<Soba> sobee = await userTableObj.ReadAsync();
+            List<Soba> sve_sobe = new List<Soba>(sobee);
+            await userTableObj.UpdateAsync(primljena);//.LookupAsync(primljena.id);
         }
 
         static async Task ConfirmMessageAsync(string text)

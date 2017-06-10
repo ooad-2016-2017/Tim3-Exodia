@@ -8,24 +8,28 @@ namespace FutureHotel.Model
 {
     public class Soba
     {
-        public int id { get; set; }
-        public int brojKreveta { get; set; }
+        public string id { get; set; }
+        public int redni_br { get; set; }
+        public string tip { get; set; }
         public DateTime zauzetaDo { get; set; }
-        public int gost { get; set; }
+        public string gost_guid { get; set; }
 
-        public Soba(int id, int brojKreveta, DateTime zauzetaDo, int gost)
+        public Soba(string id, int red_br, string brojKreveta, DateTime zauzetaDo, string gost)
         {
+            redni_br = redni_br;
             this.id = id;
-            this.brojKreveta = brojKreveta;
+            this.tip = brojKreveta;
             this.zauzetaDo = zauzetaDo;
-            this.gost = gost;
+            this.gost_guid = gost;
         }
 
-        public Soba(int id, int brojKreveta)
+        public Soba(string id, string brojKreveta)
         {
             this.id = id;
-            this.brojKreveta = brojKreveta;
+            this.tip = brojKreveta;
             
         }
+
+        public Soba() { }
     }
 }

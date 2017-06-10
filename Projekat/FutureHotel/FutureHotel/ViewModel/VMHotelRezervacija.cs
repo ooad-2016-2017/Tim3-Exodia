@@ -1,4 +1,6 @@
-﻿using FutureHotel.View.Recepcija;
+﻿using FutureHotel.Model;
+using FutureHotel.View.Recepcija;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,12 @@ namespace FutureHotel.ViewModel
         public String tbrojNocenja = "Broj nocenja:\t0";
         public String tukupno = "Ukupno:\t0$";
 
+        public List<Soba> sve_sobe { get; set; }
+
+        IMobileServiceTable<Soba> userTableObj = App.MobileService.GetTable<Soba>();
+
+
+
         public ICommand proslijedi { get; set; }
 
         public async void validiraj()
@@ -42,8 +50,15 @@ namespace FutureHotel.ViewModel
             validirano = true;
         }
 
+
+
         public async void bNastaviClick(object param)
         {
+            //Ovu smo metodu koristili kada smo popunlili tabelu soba
+            //await nafiluj();
+            IEnumerable<Soba> sobee = await userTableObj.ReadAsync();
+            sve_sobe = new List<Soba>(sobee);
+
             validiraj();
             if (validirano)
             {
@@ -76,10 +91,73 @@ namespace FutureHotel.ViewModel
                     List<String> s = new List<String>();
                     s.Add(tipSobe);
                     s.Add(brojNocenja);
-                    VMRezervacija rez = new VMRezervacija(s);
-                    frame.Navigate(typeof(RecepcijaUzimanjeGlasa), rez);
+                    Soba zeljena = null;
+
+                    //ovdje provjeriti da li postoji zeljeni tip sobe
+                    for (int i = 0; i < sve_sobe.Count; i++)
+                    {
+                        if (tipSobe.Equals(sve_sobe[i].tip) && sve_sobe[i].zauzetaDo < System.DateTime.Today) {
+                            sve_sobe[i].zauzetaDo = System.DateTime.Today.AddDays(Double.Parse(brojNocenja));
+                            zeljena = sve_sobe[i];
+                           
+                        }
+                    }
+                    if (zeljena == null)
+                    {
+                        var dialog1 = new MessageDialog("Ne postoji slobodna soba s takvim karakteristikama.");
+                        await dialog1.ShowAsync();
+                    }
+                    else
+                    {
+                        VMRezervacija rez = new VMRezervacija(zeljena);
+                        frame.Navigate(typeof(RecepcijaUzimanjeGlasa), rez);
+                    }
                 }
             }
+        }
+
+        public async Task nafiluj()
+        {
+            try
+            {
+                Soba obj = new Soba();
+                obj.redni_br = 1;
+                obj.tip = "Dvokrevetna";
+                userTableObj.InsertAsync(obj);
+            } catch(Exception e) {
+                MessageDialog msgDialogError = new MessageDialog("Error : " +
+                   e.ToString());
+                msgDialogError.ShowAsync();
+            }
+            /* public void dodajZaposlenog(object param)
+        {
+            validiraj();
+            if (validirano)
+            {
+                //rad sa bazom
+
+                try
+                {
+                    Zaposlenik obj = new Zaposlenik();
+                    obj.ime = ime;
+                    obj.prezime = prezime;
+                    obj.dat_rodjenja = datum.ToString();
+                    obj.plata = Double.Parse(plata);
+                    obj.slika = slika;
+
+                    userTableObj.InsertAsync(obj);
+                    MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog zaposlenog.");
+                     msgDialog.ShowAsync();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageDialog msgDialogError = new MessageDialog("Error : " +
+                   ex.ToString());
+                    msgDialogError.ShowAsync();
+                }
+            }
+        }*/
         }
 
         public VMHotelRezervacija()
@@ -90,6 +168,11 @@ namespace FutureHotel.ViewModel
             TipoviSobe.Add("Dvokrevetna");
             TipoviSobe.Add("Bracnokrevetna");
             proslijedi = new RelayCommand<object>(bNastaviClick, moze);
+
+
+            //Ovdje učitati sve sobe u listu soba, pa kasnije ju proslijediti tamo (u VM rezervacija) gdje ce se izvrsiti finalna pohrana
+
+
         }
 
         public bool moze (object param) { return true; }
