@@ -55,7 +55,7 @@ namespace FutureHotel.ViewModel
         public async void bNastaviClick(object param)
         {
             //Ovu smo metodu koristili kada smo popunlili tabelu soba
-            //await nafiluj();
+            await nafiluj();
             IEnumerable<Soba> sobee = await userTableObj.ReadAsync();
             sve_sobe = new List<Soba>(sobee);
 
@@ -120,10 +120,14 @@ namespace FutureHotel.ViewModel
         {
             try
             {
-                Soba obj = new Soba();
-                obj.redni_br = 1;
-                obj.tip = "Dvokrevetna";
-                userTableObj.InsertAsync(obj);
+                for (int i = 1; i <= 50; i++)
+                {
+                    Soba obj = new Soba();
+                    obj.redni_br = i;
+                    obj.tip = TipoviSobe[i % 3];
+                    userTableObj.InsertAsync(obj);
+                }
+
             } catch(Exception e) {
                 MessageDialog msgDialogError = new MessageDialog("Error : " +
                    e.ToString());

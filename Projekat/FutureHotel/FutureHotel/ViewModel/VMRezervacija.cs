@@ -101,7 +101,7 @@ namespace FutureHotel.ViewModel
         {
             IEnumerable<Soba> sobee = await userTableObj.ReadAsync();
             List<Soba> sve_sobe = new List<Soba>(sobee);
-            await userTableObj.UpdateAsync(primljena);//.LookupAsync(primljena.id);
+            await userTableObj.UpdateAsync(primljena);
         }
 
         static async Task ConfirmMessageAsync(string text)

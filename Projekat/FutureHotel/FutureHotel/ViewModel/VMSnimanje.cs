@@ -1,6 +1,8 @@
 ﻿
 using CognitiveAPIWrapper.Audio;
 using CognitiveAPIWrapper.SpeakerIdentification;
+using FutureHotel.Model;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,13 @@ namespace FutureHotel.ViewModel
     public class VMSnimanje
     {
         public ICommand Provjeri { get; set; }
+        public int broj_sobe { get; set; }
+        public List<Soba> sobe { get; set; }
+        IMobileServiceTable<Soba> userTableObj = App.MobileService.GetTable<Soba>();
 
-        public VMSnimanje()
+        public VMSnimanje(int redni_br_sobe)
         {
+            broj_sobe = redni_br_sobe;
             Provjeri = new RelayCommand<object>(OnIdentifyAsync, moze);
         }
 
@@ -29,6 +35,8 @@ namespace FutureHotel.ViewModel
 
         async void OnIdentifyAsync(object sender)
         {
+            //"bcb602e3b3bc479a9a8bbe8cad9ecebe"
+            await ucitaj();
             // IdentificationClient is my wrapper for the identification REST API.
             // It needs my Cognitive speaker recognition API key in order to work.
             IdentificationClient idClient = new IdentificationClient("bcb602e3b3bc479a9a8bbe8cad9ecebe");
@@ -41,12 +49,12 @@ namespace FutureHotel.ViewModel
 
             // Ask the user to begin speaking.
             await ConfirmMessageAsync(
-              $"dismiss the dialog then speak for 20 seconds");  //bilo 60 seconds  !!!!!!!!!!!!!!!!!
+              $"dismiss the dialog then speak for 60 seconds");
 
             // Wrapper class which uses AudioGraph to record audio to a file over a specified
             // period of time.
             StorageFile recordingFile = await CognitiveAudioGraphRecorder.RecordToTemporaryFileAsync(
-              TimeSpan.FromSeconds(20));   //Bilo 60
+              TimeSpan.FromSeconds(60));
 
             // Make a call to the 'Create Enrollment' API to process the speech for the
             // profile. 
@@ -67,11 +75,21 @@ namespace FutureHotel.ViewModel
             // But if they worked...
             if (result?.ProcessingResult.IdentifiedProfileId != default(Guid))
             {
-                // Build up a message containing the recognised profile ID and the confidence applied.
-                message = $"recognised profile {result.ProcessingResult.IdentifiedProfileId.ToString()}" +
-                  $" with {result.ProcessingResult.Confidence} confidence";
+                for (int i = 0; i < sobe.Count; i++)
+                {
+                    if(broj_sobe == sobe[i].redni_br && result.ProcessingResult.IdentifiedProfileId.ToString() == sobe[i].gost_guid) 
+                    // Build up a message containing the recognised profile ID and the confidence applied.
+                    message = $"Prepoznat profil {result.ProcessingResult.IdentifiedProfileId.ToString()}" +
+                      $" sa {result.ProcessingResult.Confidence} postotnom preciznoscu. Otvorena soba {broj_sobe}";
+                }
             }
             await ConfirmMessageAsync(message);
+        }
+
+        public async Task ucitaj()
+        {
+            IEnumerable<Soba> sob = await userTableObj.ReadAsync();
+            sobe = new List<Soba>(sob);
         }
 
         static async Task ConfirmMessageAsync(string text)

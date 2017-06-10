@@ -26,7 +26,7 @@ namespace FutureHotel.View.Vrata
         public VrataSnimanjeGlasa()
         {
             this.InitializeComponent();
-            DataContext = new VMSnimanje();
+            DataContext = new VMSnimanje(49);
         }
     }
 }
