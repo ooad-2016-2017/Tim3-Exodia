@@ -34,5 +34,19 @@ namespace FutureHotel.Restoran
         {
             DataContext = (VMRestoran)e.Parameter;
         }
+
+        private void daljeG_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Button contentTextBlock = sender as Button;
+            if (contentTextBlock != null)
+            {
+                double fontsizeMultiplier = this.daljeG.ActualHeight * 0.4;
+                // Set the new FontSize 
+                this.RestoraniListView.FontSize = Math.Floor(fontsizeMultiplier);
+                this.daljeG.FontSize = Math.Floor(fontsizeMultiplier);
+                this.Text1.FontSize = Math.Floor(fontsizeMultiplier);
+
+            }
+        }
     }
 }

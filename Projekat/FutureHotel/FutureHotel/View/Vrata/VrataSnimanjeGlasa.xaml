@@ -21,7 +21,7 @@
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Pritisnite dugme za snimanje glasa" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <Button Background="#FFffcecf" Foreground="#FF262625" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Snimi" FontSize="40" Command="{Binding Path=Provjeri}"></Button>
+        <TextBlock Name="Text1" Grid.Column="1" Grid.Row="1" Text="Pritisnite dugme za snimanje glasa" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Name="ButtonSnimi" SizeChanged="ButtonSnimi_SizeChanged" Background="#FFffcecf" Foreground="#FF262625" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Snimi" FontSize="40" Command="{Binding Path=Provjeri}"></Button>
     </Grid>
 </Page>
