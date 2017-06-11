@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Assets.Scripts;
 
 public class Hotel : MonoBehaviour {
     
@@ -17,6 +18,7 @@ public class Hotel : MonoBehaviour {
     public GameObject gameOverPanel;
 
     private int index;
+    private int disolver = 0;
     private int score = 0;
     private float pomjeranje = 0.0f;
     private float brzina = 1.0f;
@@ -32,8 +34,14 @@ public class Hotel : MonoBehaviour {
 
 	void Start () {
         hotel = new GameObject[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-            hotel[i] = transform.GetChild(i).gameObject;
+        GORepository go = new GORepository(ref hotel);
+        for(Iterator iter = go.getIterator(); iter.hasNext();)
+        {
+            GameObject o = (GameObject)iter.next();
+            o = transform.GetChild(disolver).gameObject;
+            hotel[disolver] = o;
+            disolver++;
+        }
 
         index = transform.childCount - 1;
 	}
