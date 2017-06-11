@@ -73,7 +73,7 @@ namespace FutureHotel.ViewModel
             string message = "not recognised";
 
             // But if they worked...
-            if (result?.ProcessingResult.IdentifiedProfileId != default(Guid))
+            if (result.ProcessingResult != null && result?.ProcessingResult.IdentifiedProfileId != default(Guid))
             {
                 for (int i = 0; i < sobe.Count; i++)
                 {

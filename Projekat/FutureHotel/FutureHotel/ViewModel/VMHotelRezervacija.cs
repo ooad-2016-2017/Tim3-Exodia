@@ -55,7 +55,7 @@ namespace FutureHotel.ViewModel
         public async void bNastaviClick(object param)
         {
             //Ovu smo metodu koristili kada smo popunlili tabelu soba
-            await nafiluj();
+            //await nafiluj();
             IEnumerable<Soba> sobee = await userTableObj.ReadAsync();
             sve_sobe = new List<Soba>(sobee);
 
