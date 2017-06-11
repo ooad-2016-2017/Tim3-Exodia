@@ -73,14 +73,16 @@ namespace FutureHotel.ViewModel
             string message = "not recognised";
 
             // But if they worked...
-            if (result.ProcessingResult != null && result?.ProcessingResult.IdentifiedProfileId != default(Guid))
+            if (/*result.ProcessingResult != null &&*/ result?.ProcessingResult.IdentifiedProfileId != default(Guid))
             {
                 for (int i = 0; i < sobe.Count; i++)
                 {
-                    if(broj_sobe == sobe[i].redni_br && result.ProcessingResult.IdentifiedProfileId.ToString() == sobe[i].gost_guid && result.ProcessingResult.Confidence.ToString().Equals("High"))
-                    // Build up a message containing the recognised profile ID and the confidence applied.
-                    message = $"Prepoznat profil {result.ProcessingResult.IdentifiedProfileId.ToString()}" +
-                      $" sa {result.ProcessingResult.Confidence} postotnom preciznoscu. Otvorena soba {broj_sobe}";
+                    if (broj_sobe == sobe[i].redni_br && result.ProcessingResult.IdentifiedProfileId.ToString() == sobe[i].gost_guid && result.ProcessingResult.Confidence.ToString().Equals("High"))
+                    {
+                        // Build up a message containing the recognised profile ID and the confidence applied.
+                        message = $"Prepoznat profil {result.ProcessingResult.IdentifiedProfileId.ToString()}" +
+                          $" sa {result.ProcessingResult.Confidence} postotnom preciznoscu. Otvorena soba {broj_sobe}";
+                    }
                 }
             }
             await ConfirmMessageAsync(message);
