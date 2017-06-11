@@ -26,7 +26,7 @@ namespace FutureHotel.View.Vrata
         public VrataSnimanjeGlasa()
         {
             this.InitializeComponent();
-            DataContext = new VMSnimanje(49);
+            DataContext = new VMSnimanje(48);
         }
 
         private void ButtonSnimi_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -57,14 +57,14 @@ namespace FutureHotel.ViewModel
             primljena.gost_guid = profileId.ToString();
             
             
-            float remainingTalkTime = 30.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
+            float remainingTalkTime = 60.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
 
             // Loop until we have fully enrolled - this check is perhaps simplistic as
             // we may get errors etc.
             while (remainingTalkTime > 0)
             {
                 // The service wants a minimum of 20 seconds of recorded file.
-                remainingTalkTime = Math.Max(remainingTalkTime, 30.0f);
+                remainingTalkTime = Math.Max(remainingTalkTime, 60.0f);
 
                 // Ask the user to begin speaking.
                 await ConfirmMessageAsync(
