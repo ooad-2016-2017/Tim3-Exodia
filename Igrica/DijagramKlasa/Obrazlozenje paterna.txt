@@ -1,0 +1,1 @@
+Iterator patern - Ovo je jedini patern koji smo mogli primijeniti u našoj igrici. Koristimo iterator da prodjemo sekvencijalno kroz niz GameObject-a bez potrebe poznavanja kako je kolekcija strukturirana.

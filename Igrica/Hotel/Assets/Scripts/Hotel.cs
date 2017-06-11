@@ -14,7 +14,6 @@ public class Hotel : MonoBehaviour {
     private const float POMJERANJE = 5.0f;
     private const float GRESKA = 0.05f;
     private const float VELICINA = 1f;
-    private int combo = 0;
     public GameObject gameOverPanel;
 
     private int index;
@@ -98,8 +97,8 @@ public class Hotel : MonoBehaviour {
             float deltaX = posljednjaPozicija.x - t.position.x;
             if(Mathf.Abs(deltaX) <= GRESKA)
             {
-                combo++;
-                //perfect
+                score++;
+                //gratis ako je fino postavljena kocka
             }
             else
             {
@@ -112,8 +111,8 @@ public class Hotel : MonoBehaviour {
             float deltaZ = posljednjaPozicija.z - t.position.z;
             if (Mathf.Abs(deltaZ) <= GRESKA)
             {
-                combo++;
-                //perfect
+                score++;
+                //gratis ako je fino postavljena kocka
             }
             else
             {
