@@ -45,7 +45,7 @@ namespace FutureHotel.ViewModel
             // service knows in order to keep the code shorter.
             IdentificationProfile[] profiles = await idClient.GetIdentificationProfilesAsync();
 
-            Guid[] profileIds = profiles.Take(10).Select(p => p.IdentificationProfileId).ToArray();
+            Guid[] profileIds = profiles.Take(1).Select(p => p.IdentificationProfileId).ToArray();
 
             // Ask the user to begin speaking.
             await ConfirmMessageAsync(
@@ -77,7 +77,7 @@ namespace FutureHotel.ViewModel
             {
                 for (int i = 0; i < sobe.Count; i++)
                 {
-                    if(broj_sobe == sobe[i].redni_br && result.ProcessingResult.IdentifiedProfileId.ToString() == sobe[i].gost_guid) 
+                    if(broj_sobe == sobe[i].redni_br && result.ProcessingResult.IdentifiedProfileId.ToString() == sobe[i].gost_guid && result.ProcessingResult.Confidence.ToString().Equals("High"))
                     // Build up a message containing the recognised profile ID and the confidence applied.
                     message = $"Prepoznat profil {result.ProcessingResult.IdentifiedProfileId.ToString()}" +
                       $" sa {result.ProcessingResult.Confidence} postotnom preciznoscu. Otvorena soba {broj_sobe}";
