@@ -48,7 +48,7 @@ namespace FutureHotel.ViewModel
         {
             // IdentificationClient is my wrapper for the identification REST API.
             // It needs my Cognitive speaker recognition API key in order to work.cognitiveApiKey
-            IdentificationClient idClient = new IdentificationClient("bcb602e3b3bc479a9a8bbe8cad9ecebe");
+            IdentificationClient idClient = new IdentificationClient("02c50ed6240544bd838f220a96352d59");
 
             // Make a call to the 'Create Profile' REST API and get back a new profile ID.
             Guid profileId = await idClient.AddIdentificationProfileAsync();
@@ -57,14 +57,14 @@ namespace FutureHotel.ViewModel
             primljena.gost_guid = profileId.ToString();
             
             
-            float remainingTalkTime = 20.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
+            float remainingTalkTime = 30.0f;  //trebalo biti 60.0f -> prebačeno na 20.0f
 
             // Loop until we have fully enrolled - this check is perhaps simplistic as
             // we may get errors etc.
             while (remainingTalkTime > 0)
             {
                 // The service wants a minimum of 20 seconds of recorded file.
-                remainingTalkTime = Math.Max(remainingTalkTime, 20.0f);
+                remainingTalkTime = Math.Max(remainingTalkTime, 30.0f);
 
                 // Ask the user to begin speaking.
                 await ConfirmMessageAsync(

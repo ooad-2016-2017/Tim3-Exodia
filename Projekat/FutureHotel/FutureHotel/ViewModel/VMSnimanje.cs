@@ -39,7 +39,7 @@ namespace FutureHotel.ViewModel
             await ucitaj();
             // IdentificationClient is my wrapper for the identification REST API.
             // It needs my Cognitive speaker recognition API key in order to work.
-            IdentificationClient idClient = new IdentificationClient("bcb602e3b3bc479a9a8bbe8cad9ecebe");
+            IdentificationClient idClient = new IdentificationClient("02c50ed6240544bd838f220a96352d59");
 
             // In this example, we are only going to use the first 10 profile IDs that the
             // service knows in order to keep the code shorter.
