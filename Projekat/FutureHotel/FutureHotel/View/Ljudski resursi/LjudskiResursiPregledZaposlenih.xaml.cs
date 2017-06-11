@@ -31,14 +31,17 @@ namespace FutureHotel.Ljudski_resursi
 
         private void tbPretraga_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            TextBlock contentTextBlock = sender as TextBlock;
+            TextBox contentTextBlock = sender as TextBox;
             if (contentTextBlock != null)
             {
                
-                double fontsizeMultiplier = this.tbPretraga.ActualHeight * 0.5;
+                double fontsizeMultiplier = this.bPretraga.ActualWidth * 0.1;
                 this.tbPretraga.FontSize = Math.Floor(fontsizeMultiplier);
                 this.TextBlock1.FontSize = Math.Floor(fontsizeMultiplier);
                 this.ListView1.FontSize = Math.Floor(fontsizeMultiplier);
+                this.bPretraga.FontSize = Math.Floor(fontsizeMultiplier);
+                this.bPregled.FontSize = Math.Floor(fontsizeMultiplier);
+                this.bNazad.FontSize = Math.Floor(fontsizeMultiplier);
             }
         }
 

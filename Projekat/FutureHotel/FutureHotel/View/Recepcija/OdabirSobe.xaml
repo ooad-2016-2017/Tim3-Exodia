@@ -20,8 +20,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Odaberite tip sobe:" FontSize="40" VerticalAlignment="Bottom" Margin="5,0,0,0"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="Odaberite broj nocenja:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Name="Text1" Grid.Column="0" Grid.Row="0" Text="Odaberite tip sobe:" FontSize="40" VerticalAlignment="Bottom" Margin="5,0,0,0" SizeChanged="Text1_SizeChanged"></TextBlock>
+        <TextBlock Name="Text2" Grid.Column="1" Grid.Row="0" Text="Odaberite broj nocenja:" FontSize="40" VerticalAlignment="Bottom"></TextBlock>
         <ComboBox Background="#FFffcecf" Foreground="#FF262625" SelectedValue="{Binding Path=tipSobe, Mode=TwoWay}" ItemsSource="{Binding Path=TipoviSobe}" Name="cbTipSobe" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" Margin="5,0,10,0"></ComboBox>
         <TextBox  Text="{Binding Path=brojNocenja, Mode=TwoWay}" Name="tbBrojNocenja" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,0,20,0"></TextBox>
         <Button Background="#FFffcecf" Foreground="#FF262625" Name="bNastavi" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Nastavi" FontSize="40" Margin="0,0,20,0"

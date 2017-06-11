@@ -25,5 +25,19 @@ namespace FutureHotel.Recepcija
             cbJezici.Items.Add("Bosanski");
             cbJezici.SelectedItem = "Bosanski";
         }
+
+        private void cbJezici_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ComboBox contentTextBlock = sender as ComboBox;
+            if (contentTextBlock != null)
+            {
+                
+                    double fontsizeMultiplier = this.cbJezici.ActualHeight * 0.5;
+                    // Set the new FontSize 
+                    this.cbJezici.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.Text1.FontSize = Math.Floor(fontsizeMultiplier);
+                
+            }
+        }
     }
 }

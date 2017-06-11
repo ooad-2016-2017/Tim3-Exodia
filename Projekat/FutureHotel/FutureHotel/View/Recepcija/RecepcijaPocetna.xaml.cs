@@ -31,5 +31,16 @@ namespace FutureHotel.View.Recepcija
         {
             this.Frame.Navigate(typeof(OdabirSobe));
         }
+
+        private void bNastavi_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Button contentTextBlock = sender as Button;
+            if (contentTextBlock != null)
+            {
+                double fontsizeMultiplier = this.bNastavi.ActualWidth * 0.1;
+                this.bNastavi.FontSize = Math.Floor(fontsizeMultiplier);                
+            }
+        }
+        
     }
 }

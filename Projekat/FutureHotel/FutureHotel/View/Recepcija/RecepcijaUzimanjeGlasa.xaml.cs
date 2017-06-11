@@ -32,6 +32,19 @@ namespace FutureHotel.View.Recepcija
         {
             DataContext = (VMRezervacija)e.Parameter;
         }
+
+        private void ButtonSnimi_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Button contentTextBlock = sender as Button;
+            if (contentTextBlock != null)
+            {
+                    double fontsizeMultiplier = this.ButtonSnimi.ActualWidth * 0.1;
+                    // Set the new FontSize 
+                    this.ButtonSnimi.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.Text1.FontSize = Math.Floor(fontsizeMultiplier * 0.5);
+                
+            }
+        }
     }
 
     

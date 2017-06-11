@@ -28,5 +28,24 @@ namespace FutureHotel.View.Recepcija
             this.InitializeComponent();
             DataContext = new VMHotelRezervacija();
         }
+
+        private void Text1_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            TextBlock contentTextBlock = sender as TextBlock;
+            if (contentTextBlock != null)
+            {
+                double height = contentTextBlock.Height;
+                if (this.bNastavi.ActualHeight != height)
+                {
+                    double fontsizeMultiplier = this.bNastavi.ActualHeight * 0.3;
+                    // Set the new FontSize 
+                    this.Text1.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.Text2.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.tbBrojNocenja.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.cbTipSobe.FontSize = Math.Floor(fontsizeMultiplier);
+                    this.bNastavi.FontSize = Math.Floor(fontsizeMultiplier);
+                }
+            }
+        }
     }
 }
