@@ -1,48 +1,42 @@
-Initialize engine version: 5.6.1f1 (2860b30f0b54)
+Initialize engine version: 5.6.0f3 (497a0f351392)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
     Vendor:   NVIDIA
-    VRAM:     3035 MB
-    Driver:   21.21.13.7653
+    VRAM:     2017 MB
+    Driver:   22.21.13.8205
 Begin MonoManager ReloadAssembly
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.142 seconds
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: E:\Hamza\fakultet\OOAD\Backup\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.025 seconds
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\96eni\Tim3-Exodia\Igrica\Hotel\ff_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 43.540054 ms
+UnloadTime: 1.353281 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2130 -> priority: 1 
-  Thread -> id: 2c9c -> priority: 1 
+  Thread -> id: 21d4 -> priority: 1 
+  Thread -> id: 1c0c -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 13.233553 ms
+UnloadTime: 6.860446 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 509.
-Total: 0.251192 ms (FindLiveObjects: 0.046873 ms CreateObjectMapping: 0.021633 ms MarkObjects: 0.178178 ms  DeleteObjects: 0.003906 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 512.
+Total: 0.312887 ms (FindLiveObjects: 0.056707 ms CreateObjectMapping: 0.015387 ms MarkObjects: 0.232243 ms  DeleteObjects: 0.007693 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.432374 ms
+UnloadTime: 0.657975 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 286.
-Total: 0.228356 ms (FindLiveObjects: 0.020131 ms CreateObjectMapping: 0.008413 ms MarkObjects: 0.150534 ms  DeleteObjects: 0.048375 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.376788 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 510.
-Total: 0.196807 ms (FindLiveObjects: 0.051380 ms CreateObjectMapping: 0.008713 ms MarkObjects: 0.133408 ms  DeleteObjects: 0.003004 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 289.
+Total: 0.388687 ms (FindLiveObjects: 0.033340 ms CreateObjectMapping: 0.015672 ms MarkObjects: 0.228824 ms  DeleteObjects: 0.109710 ms)
 
